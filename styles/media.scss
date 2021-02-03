@@ -1,0 +1,337 @@
+@media screen and (max-width: 1300px) {
+
+    .header {
+        gap: 0;
+        row-gap: 30px;
+
+        .headerText {
+            p {
+                font-size: 16px;
+                line-height: 28px;
+            }
+        }
+    }
+
+    .main {
+        .sectionAboutUs {
+            .aboutUsWrapper {
+                grid-template-columns: 1fr 1fr;
+                gap: 100px;
+                grid-template-areas: 'aboutUsImg aboutUsText';
+            }
+        }
+
+        .sectionCompletedWork {
+            .completeInfoBlock {
+                gap: 100px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .header {
+        grid-template-columns: 1fr minmax(500px, 1fr);
+        column-gap: 50px;
+
+        .headerText {
+            span {
+                font-size: 15px;
+            }
+
+            h1 {
+                font-size: 49px;
+                line-height: 58px;
+            }
+
+            p {
+                font-size: 15px;
+                line-height: 25px;
+            }
+        }
+
+        .headerImg {
+            width: 100%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+    }
+
+    .main {
+        .sectionAboutUs {
+            .aboutUsWrapper {
+                grid-template-columns: minmax(500px, 1fr) 1fr;
+                column-gap: 85px;
+
+                .aboutUsImg {
+                    width: 100%;
+                    display: table;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+            }
+        }
+
+        .sectionSuccess {
+            grid-template-columns: 1fr minmax(400px, 1fr);
+            column-gap: 85px;
+
+            .successText {
+                .textImageSuccess {
+                    p {
+                        font-size: 245px;
+                        line-height: 225px;
+                    }
+                }
+
+                h2 {
+                    font-size: 45px;
+                    line-height: 60px;
+                }
+            }
+
+            .successImg {
+                width: 100%;
+                display: table;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+        }
+    }
+
+}
+
+@media screen and (max-width: 1100px) {
+    .header {
+        .headerNav {
+            .desktopMenu {
+                display: none;
+            }
+
+            .burgerBlock {
+                display: block;
+            }
+        }
+    }
+
+    .headerNavMobile {
+        display: flex;
+        position: fixed;
+        top: -100%;
+        z-index: 999;
+        width: 100%;
+        height: 100vh;
+        background-color: #fff;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        ul {
+            font-family: OpenSans-Regular;
+
+            li {
+                padding: 6px 0;
+
+                a {
+                    color: #000;
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+
+    .main {
+        .sectionServices {
+            .servicesBlock {
+                grid-template-areas:
+                    'serviceSvg serviceTitle'
+                    'serviceText serviceText';
+
+                .serviceSubtitle {
+                    align-self: center;
+                }
+            }
+
+            .serviceSpan {
+                font-size: 17px;
+            }
+
+            .servicesTitle {
+                font-size: 35px;
+                line-height: 67px;
+            }
+        }
+
+        .sectionCompletedWork {
+            .completeInfoBlock {
+                gap: 70px;
+            }
+        }
+
+        .sectionBlog {
+            .blogCardContainer {
+                .blogCard {
+                    grid-template-rows: 1fr 65px 75px 90px;
+                    row-gap: 20px;
+
+                    h4 {
+                        align-self: baseline;
+                        line-height: 32px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+    .header {
+        grid-template-columns: 1fr minmax(475px, 1fr);
+
+        .headerText {
+            span {
+                font-size: 13px;
+            }
+
+            h1 {
+                font-size: 44px;
+                line-height: 50px;
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 22px;
+            }
+        }
+
+        .headerImg {
+            display: table;
+        }
+    }
+
+    .main {
+        .sectionServices {
+            .servicesBlock {
+                grid-template-columns: 60px 1fr;
+                padding: 25px;
+
+                .serviceSubtitle {
+                    font-size: 21px;
+                }
+            }
+        }
+
+        .sectionAboutUs {
+            .aboutUsWrapper {
+                grid-template-columns: minmax(450px, 1fr) 1fr;
+                column-gap: 85px;
+
+                .aboutUsText {
+                    span {
+                        font-size: 18px;
+                    }
+
+                    h2 {
+                        font-size: 40px;
+                        line-height: 48px;
+                        margin: 5px 0;
+                    }
+
+                    p {
+                        font-size: 16px;
+                        line-height: 29px;
+                    }
+                }
+            }
+        }
+
+        .sectionSuccess {
+            .successText {
+                .textImageSuccess {
+                    p {
+                        font-size: 215px;
+                        line-height: 210px;
+                    }
+
+                    h2 {
+                        line-height: 55px;
+                    }
+                }
+            }
+
+            .successImg {
+                align-self: center;
+            }
+        }
+
+        .sectionCompletedWork {
+            .completeTitleBlock {
+                h3 {
+                    font-size: 44px;
+                    line-height: 60px;
+                }
+            }
+
+            .completeInfoBlock {
+                grid-template-columns: repeat(2, 185px);
+                grid-template-areas:
+                    'statProject statClient'
+                    'statwinners statRecommend';
+                gap: 80px;
+            }
+        }
+
+        .sectionTestimonials {
+            .feedbackBlock {
+                gap: 60px;
+
+                .card {
+                    flex-direction: column;
+                    align-items: baseline;
+
+                    .cardImg {
+                        margin: 0 0 20px;
+                    }
+                }
+            }
+        }
+
+        .sectionSignUp {
+            .signUpBlockText {
+                h3 {
+                    font-size: 43px;
+                    line-height: 55px;
+                }
+            }
+
+            .signUpBlockInput {
+                input {
+                width: 450px;
+            }
+            } 
+        }
+    }
+
+    .footer {
+        .footerWrapper {
+            grid-template-areas: 
+            'logo quick company'
+            'logo contact follow'
+            'copyright copyright copyright';
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr 1fr 60px;
+            column-gap: 20px;
+            row-gap: 30px;
+        }
+    }
+}
