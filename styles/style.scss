@@ -2,7 +2,22 @@
     box-sizing: border-box;
 }
 
+ul {
+    padding: 0;
 
+    li {
+        list-style: none;
+
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+// header, section {
+//     max-width: 1440px;
+//     margin: 0 auto;
+// }
 
 body {
     padding: 0;
@@ -14,9 +29,13 @@ $brownColor: #CAA892;
 $bgColor: #F8F8F8;
 $greyColor: #646464;
 
+.wrapper {
+    overflow: hidden;
+}
 
 .maxSize {
     max-width: 1440px;
+    width: 95%;
     margin: 0 auto;
 }
 
@@ -41,6 +60,83 @@ $greyColor: #646464;
         font-family: OpenSans-Regular;
         justify-self: end;
         align-self: center;
+
+        .burgerBlock {
+            display: none;
+            width: 50px;
+            height: 35px;
+            position: relative;
+            z-index: 1000;
+            margin: 50px auto;
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+            -webkit-transition: .5s ease-in-out;
+            -moz-transition: .5s ease-in-out;
+            -o-transition: .5s ease-in-out;
+            transition: .5s ease-in-out;
+            cursor: pointer;
+
+            span {
+                display: block;
+                position: absolute;
+                height: 9px;
+                width: 100%;
+                background: $brownColor;
+                border-radius: 9px;
+                opacity: 1;
+                left: 0;
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+                -webkit-transition: .25s ease-in-out;
+                -moz-transition: .25s ease-in-out;
+                -o-transition: .25s ease-in-out;
+                transition: .25s ease-in-out;
+
+
+                &:nth-child(1) {
+                    top: 0px;
+                }
+
+                &:nth-child(2),
+                &:nth-child(3) {
+                    top: 18px;
+                }
+
+                &:nth-child(4) {
+                    top: 36px;
+                }
+            }
+
+            &.open span:nth-child(1) {
+                top: 18px;
+                width: 0%;
+                left: 50%;
+            }
+
+            &.open span:nth-child(2) {
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+
+            &.open span:nth-child(3) {
+                -webkit-transform: rotate(-45deg);
+                -moz-transform: rotate(-45deg);
+                -o-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+            }
+
+            &.open span:nth-child(4) {
+                top: 18px;
+                width: 0%;
+                left: 50%;
+            }
+        }
 
         ul {
             display: flex;
@@ -104,6 +200,8 @@ $greyColor: #646464;
         }
     }
 
+
+
     .headerText {
         grid-area: headerText;
         align-self: center;
@@ -160,7 +258,7 @@ $greyColor: #646464;
         border: 2px solid #B0855B;
         box-sizing: border-box;
         border-radius: 140px 0px;
-        display: inherit;
+        display: inline-flex;
 
         img {
             border-radius: 140px 0px;
@@ -178,6 +276,70 @@ $greyColor: #646464;
     }
 }
 
+.headerNavMobile {
+    transition: all .4s ease-in;
+    display: none;
+
+    // opacity: 0;
+
+    ul {
+        li {
+            .headerNavLink {
+                text-decoration: none;
+                color: #000;
+                text-transform: uppercase;
+                position: relative;
+                transition: all .3s;
+
+                &:before {
+                    content: "";
+                    width: 0;
+                    height: 0.1em;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    background: $brownColor;
+                    transition: all 0.5s;
+                }
+
+                &:hover {
+                    &:before {
+                        width: 100%;
+                        left: 0;
+                        background: $brownColor;
+                    }
+                }
+
+            }
+
+            &:last-child {
+                background-color: $brownColor;
+                margin: 20px 0;
+                border-radius: 15px 0px;
+                transition: background-color .3s ease;
+                border: 2px solid $brownColor;
+
+                a {
+                    text-decoration: none;
+                    color: #fff;
+
+                }
+
+                &:hover {
+                    background-color: #fff;
+                    // border: 1px solid $brownColor;
+                    cursor: pointer;
+
+                    a {
+                        color: $brownColor;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
 .main {
     .sectionServices {
         display: grid;
@@ -189,7 +351,7 @@ $greyColor: #646464;
 
         grid-template-areas:
             'servicesSpan ... ...'
-            'servicesTitle ... servicesArrows'
+            'servicesTitle servicesTitle servicesTitle'
             'designServ ArchitectServ planServ';
 
         .servicesSpan {
@@ -267,6 +429,11 @@ $greyColor: #646464;
                 grid-area: serviceText;
                 font-family: OpenSans-Regular;
                 font-size: 18px;
+                color: $greyColor;
+
+                &:hover {
+                    color: #fff;
+                }
             }
 
 
@@ -451,12 +618,12 @@ $greyColor: #646464;
     .sectionCompletedWork {
         display: grid;
         margin: 200px auto;
-        background-color: $bgColor;
+        // background-color: $bgColor;
+        background-color: grey;
         grid-template-areas:
             'completeTitleBlock'
             'completeInfoBlock';
         padding: 100px 0;
-        max-width: 1440px;
 
 
         .completeTitleBlock {
@@ -465,7 +632,7 @@ $greyColor: #646464;
             h3 {
                 font-family: Poppins-Regular;
                 font-size: 48px;
-                width: 800px;
+                max-width: 800px;
                 margin: 0 auto;
                 text-align: center;
             }
@@ -477,7 +644,8 @@ $greyColor: #646464;
             grid-template-areas:
                 'statProject statClient statwinners statRecommend';
             grid-template-columns: repeat(4, 185px);
-            grid-template-rows: 185px;
+            grid-template-rows: minmax(130px, 185px);
+            grid-auto-rows: minmax(130px, 185px);
             margin: 0 auto;
             gap: 170px;
             margin-top: 70px;
@@ -583,7 +751,7 @@ $greyColor: #646464;
             // grid-template-areas:
             //     'card card';
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: 220px;
+            grid-template-rows: minmax(220px, 1fr);
             gap: 80px;
 
             .card {
@@ -671,10 +839,11 @@ $greyColor: #646464;
 
         .blogCardContainer {
             display: grid;
-            grid-template-columns: 650px 650px;
+            grid-template-columns: minmax(250px, 650px) minmax(250px, 650px);
+            // grid-template-columns: repeat(auto-fill, minmax(100px, 650px));
             grid-template-rows: 1fr;
             gap: 60px;
-            margin: 70px 0;
+            margin: 70px 10px;
 
             .blogCard {
                 display: grid;
@@ -683,7 +852,8 @@ $greyColor: #646464;
                     'title'
                     'description'
                     'button';
-                grid-template-columns: 620px 620px;
+                // grid-template-columns: 620px 620px;
+                grid-template-columns: minmax(350px, 620px);
                 grid-template-rows: 1fr 65px 75px 110px;
 
                 .blogCardImg {
@@ -691,7 +861,7 @@ $greyColor: #646464;
                     border: 2px solid #B0855B;
                     border-radius: 100px 0px;
                     display: inline-flex;
-                    width: 559px;
+                    width: 100%;
 
                     img {
                         border-radius: 100px 0px;
@@ -699,6 +869,8 @@ $greyColor: #646464;
                         right: 17px;
                         bottom: 17px;
                         transition: all .5s ease;
+                        width: 100%;
+
 
                         &:hover {
                             right: 0px;
