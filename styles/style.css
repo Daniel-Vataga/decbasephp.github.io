@@ -273,8 +273,8 @@ body {
 }
 
 .headerNavMobile {
-  -webkit-transition: all .4s ease-in;
-  transition: all .4s ease-in;
+  -webkit-transition: all 0.4s cubic-bezier(0.33, 1, 0.68, 1);
+  transition: all 0.4s cubic-bezier(0.33, 1, 0.68, 1);
   display: none;
 }
 
