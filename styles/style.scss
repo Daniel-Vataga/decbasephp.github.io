@@ -457,7 +457,8 @@ $greyColor: #646464;
             display: grid;
             grid-template-columns: 1fr 160px 1fr;
             gap: 40px;
-            grid-template-areas: 'aboutUsImg . aboutUsText';
+            grid-template-areas:
+                'aboutUsImg . aboutUsText';
             justify-items: center;
             align-items: center;
             margin: 200px 0;
@@ -467,7 +468,7 @@ $greyColor: #646464;
                 border: 2px solid #B0855B;
                 grid-area: aboutUsImg;
                 border-radius: 140px 0px;
-                display: inherit;
+                display: flex;
 
                 img {
                     border-radius: 140px 0px;
@@ -530,6 +531,10 @@ $greyColor: #646464;
                         outline: none;
                     }
                 }
+            }
+
+            .aboutUsShowImg {
+                display: none;
             }
         }
     }
@@ -597,7 +602,7 @@ $greyColor: #646464;
             grid-area: successImg;
             border: 2px solid #B0855B;
             border-radius: 140px 0px;
-            display: inherit;
+            display: flex;
 
 
             img {
@@ -618,8 +623,7 @@ $greyColor: #646464;
     .sectionCompletedWork {
         display: grid;
         margin: 200px auto;
-        // background-color: $bgColor;
-        background-color: grey;
+        background-color: $bgColor;
         grid-template-areas:
             'completeTitleBlock'
             'completeInfoBlock';
