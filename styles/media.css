@@ -50,7 +50,6 @@
   }
   .main .sectionAboutUs .aboutUsWrapper .aboutUsImg {
     width: 100%;
-    display: table;
   }
   .main .sectionAboutUs .aboutUsWrapper .aboutUsImg img {
     width: 100%;
@@ -71,7 +70,6 @@
   }
   .main .sectionSuccess .successImg {
     width: 100%;
-    display: table;
   }
   .main .sectionSuccess .successImg img {
     width: 100%;
@@ -159,9 +157,6 @@
     font-size: 14px;
     line-height: 22px;
   }
-  .header .headerImg {
-    display: table;
-  }
   .main .sectionServices .servicesBlock {
     -ms-grid-columns: 60px 1fr;
         grid-template-columns: 60px 1fr;
@@ -241,6 +236,456 @@
     -webkit-column-gap: 20px;
             column-gap: 20px;
     row-gap: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+        grid-template-areas: 'headerLogo headerNav' '... ...' 'headerText headerImg';
+    -ms-grid-rows: 80px 0 1fr;
+        grid-template-rows: 80px 0 1fr;
+    -ms-grid-columns: 1fr minmax(300px, 400px);
+        grid-template-columns: 1fr minmax(300px, 400px);
+  }
+  .header .headerImg {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .header .headerText span {
+    font-size: 11px;
+  }
+  .header .headerText h1 {
+    font-size: 36px;
+    line-height: 41px;
+  }
+  .header .headerText p {
+    font-size: 13px;
+    line-height: 20px;
+  }
+  .header .headerText .headerTextButton {
+    font-size: 16px;
+    padding: 8px 18px;
+    margin: 6px 0;
+  }
+  .main .sectionServices {
+    -webkit-column-gap: 40px;
+            column-gap: 40px;
+    margin-top: 100px;
+        grid-template-areas: 'servicesSpan' 'servicesTitle' 'designServ' 'ArchitectServ' 'planServ';
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .main .sectionServices .servicesSpan {
+    font-size: 17px;
+  }
+  .main .sectionServices .servicesTitle {
+    font-size: 30px;
+    line-height: 50px;
+  }
+  .main .sectionServices .servicesBlock {
+    margin: 15px 0;
+  }
+  .main .sectionAboutUs .aboutUsWrapper {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: 'aboutUsText' 'aboutUsImg';
+    margin: 70px 0 120px;
+    gap: 30px;
+  }
+  .main .sectionAboutUs .aboutUsWrapper .aboutUsText h2 {
+    font-size: 33px;
+    line-height: 50px;
+  }
+  .main .sectionAboutUs .aboutUsWrapper .aboutUsText p {
+    font-size: 14px;
+    line-height: 25px;
+  }
+  .main .sectionAboutUs .aboutUsWrapper .aboutUsText .aboutUsTextButton {
+    font-size: 16px;
+    padding: 8px 18px;
+    margin: 5px 0;
+  }
+  .main .sectionAboutUs .aboutUsWrapper .aboutUsImg {
+    width: 80%;
+  }
+  .main .sectionAboutUs .aboutUsWrapper .aboutUsShowImg {
+    display: inline-block;
+    font-family: OpenSans-Regular;
+    font-size: 16px;
+    border-radius: 20px 0px;
+    border: 1px solid #000;
+    padding: 8px 18px;
+    color: #000;
+    text-transform: uppercase;
+    margin: 5px 0 0 15px;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+  }
+  .main .sectionAboutUs .aboutUsWrapper .aboutUsShowImg:hover {
+    -webkit-box-shadow: 8px 10px 20px rgba(0, 0, 0, 0.44);
+            box-shadow: 8px 10px 20px rgba(0, 0, 0, 0.44);
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+    cursor: pointer;
+  }
+  .main .sectionAboutUs .aboutUsWrapper .aboutUsShowImg:focus, .main .sectionAboutUs .aboutUsWrapper .aboutUsShowImg:active {
+    outline: none;
+  }
+  .main .sectionSuccess {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 50px;
+        grid-template-areas: 'successText successText' 'successImg successImg';
+  }
+  .main .sectionSuccess .successText .textImageSuccess p {
+    font-size: 190px;
+    line-height: 200px;
+  }
+  .main .sectionSuccess .successText h2 {
+    font-size: 35px;
+    line-height: 50px;
+  }
+  .main .sectionSuccess .successText .successTextButton {
+    font-size: 16px;
+    padding: 8px 18px;
+  }
+  .main .sectionSuccess .successImg {
+    width: 80%;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .main .sectionSuccess .successImg img {
+    border-radius: 140px 0px;
+    position: relative;
+    right: -30px;
+    bottom: -30px;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+  .main .sectionSuccess .successImg img:hover {
+    right: 0;
+    bottom: 0;
+  }
+  .main .sectionBlog {
+    padding: 50px 0 0;
+    margin: 50px 0 0;
+  }
+  .main .sectionBlog .blogTitle span {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .main .sectionBlog .blogTitle h3 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .main .sectionBlog .blogCardContainer {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: 'card' 'card2';
+    margin: 70px 30px;
+  }
+  .main .sectionBlog .blogCardContainer .blogCard {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: card;
+    -ms-grid-rows: 1fr 37px 60px 80px;
+        grid-template-rows: 1fr 37px 60px 80px;
+  }
+  .main .sectionBlog .blogCardContainer .blogCardTwo {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: card2;
+  }
+  .main .sectionSignUp {
+    margin: 50px auto;
+  }
+  .main .sectionSignUp .signUpBlockText h3 {
+    font-size: 37px;
+    line-height: 50px;
+  }
+  .main .sectionSignUp .signUpBlockInput input {
+    width: 350px;
+  }
+  .main .sectionSignUp .signUpBlockInput button {
+    padding: 10px 35px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .header {
+        grid-template-areas: 'headerLogo headerNav' 'headerText headerText' 'headerImg headerImg';
+    -ms-grid-rows: 80px 1fr;
+        grid-template-rows: 80px 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .header .headerNav .burgerBlock {
+    width: 45px;
+    height: 45px;
+  }
+  .header .headerNav .burgerBlock span {
+    height: 8px;
+  }
+  .header .headerNav .burgerBlock span:nth-child(2), .header .headerNav .burgerBlock span:nth-child(3) {
+    top: 15px;
+  }
+  .header .headerNav .burgerBlock span:nth-child(4) {
+    top: 31px;
+  }
+  .header .headerText span {
+    font-size: 15px;
+  }
+  .header .headerText h1 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  .header .headerText .headerTextButton {
+    font-size: 18px;
+    padding: 10px 60px;
+  }
+  .header .headerImg {
+    margin: 50px 0 0;
+    width: 80%;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .main .sectionServices .servicesSpan {
+    font-size: 15px;
+  }
+  .main .sectionServices .servicesTitle {
+    font-size: 22px;
+    line-height: 40px;
+  }
+  .main .sectionServices .servicesBlock .serviceSubtitle {
+    font-size: 17px;
+  }
+  .main .sectionServices .servicesBlock .serviceText {
+    font-size: 14px;
+    margin: 0;
+  }
+  .main .sectionAboutUs .aboutUsWrapper .aboutUsImg img {
+    right: -20px;
+    bottom: -20px;
+  }
+  .main .sectionAboutUs .aboutUsWrapper .aboutUsText .aboutUsTextButton {
+    font-size: 18px;
+    padding: 10px 60px;
+  }
+  .main .sectionSuccess .successText .successTextButton {
+    font-size: 18px;
+    padding: 10px 60px;
+  }
+  .main .sectionSuccess .successImg img {
+    right: -16px;
+    bottom: -16px;
+  }
+  .main .sectionCompletedWork {
+    margin: 100px auto;
+        grid-template-areas: 'completeTitleBlock' 'completeInfoBlock';
+    padding: 100px 0;
+  }
+  .main .sectionCompletedWork .completeInfoBlock {
+    -ms-grid-columns: (155px)[2];
+        grid-template-columns: repeat(2, 155px);
+    -ms-grid-rows: minmax(130px, 155px);
+        grid-template-rows: minmax(130px, 155px);
+    grid-auto-rows: minmax(130px, 155px);
+    gap: 40px;
+  }
+  .main .sectionCompletedWork .completeInfoBlock .statBlock .statInfo strong {
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .main .sectionCompletedWork .completeTitleBlock {
+    padding: 0 10px;
+  }
+  .main .sectionCompletedWork .completeTitleBlock h3 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .main .sectionTestimonials .testimonialsTitle span {
+    font-size: 17px;
+    line-height: 25px;
+  }
+  .main .sectionTestimonials .testimonialsTitle h3 {
+    font-size: 35px;
+    line-height: 40px;
+  }
+  .main .sectionTestimonials .testimonialsArrows {
+    margin: 50px 0 20px;
+  }
+  .main .sectionTestimonials .feedbackBlock {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .main .sectionTestimonials .feedbackBlock .card {
+    padding: 20px 15px;
+  }
+  .main .sectionTestimonials .feedbackBlock .card .cardInfo .cardInfoTitle strong {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .main .sectionTestimonials .feedbackBlock .card .cardInfo .cardInfoText {
+    font-size: 14px;
+    line-height: 20px;
+    margin: 10px 0;
+  }
+  .main .sectionBlog .blogTitle span {
+    font-size: 16px;
+    line-height: 21px;
+  }
+  .main .sectionBlog .blogTitle h3 {
+    font-size: 33px;
+    line-height: 40px;
+  }
+  .main .sectionBlog .blogCardContainer {
+    margin: 50px 30px;
+  }
+  .main .sectionBlog .blogCardContainer .blogCard {
+    -ms-grid-rows: 1fr 37px 43px 80px;
+        grid-template-rows: 1fr 37px 43px 80px;
+  }
+  .main .sectionBlog .blogCardContainer .blogCard h4 {
+    font-size: 25px;
+  }
+  .main .sectionBlog .blogCardContainer .blogCard p {
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .main .sectionBlog .blogCardContainer .blogCardTwo {
+    -ms-grid-rows: 1fr 37px 73px 80px;
+        grid-template-rows: 1fr 37px 73px 80px;
+  }
+  .main .sectionSignUp .signUpBlockText h3 {
+    font-size: 30px;
+    line-height: 37px;
+  }
+  .main .sectionSignUp .signUpBlockText .greyLine {
+    width: 300px;
+  }
+  .main .sectionSignUp .signUpBlockInput {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main .sectionSignUp .signUpBlockInput input {
+    width: 400px;
+  }
+  .main .sectionSignUp .signUpBlockInput button {
+    padding: 16px;
+  }
+  .footer .footerWrapper {
+        grid-template-areas: 'logo logo' 'quick company' 'contact follow' 'copyright copyright';
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: 100px 1fr 1fr 60px;
+        grid-template-rows: 100px 1fr 1fr 60px;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .header .headerLogo {
+    width: 80%;
+    padding: 0;
+  }
+  .header .headerNav .burgerBlock {
+    width: 40px;
+    height: 40px;
+  }
+  .header .headerNav .burgerBlock span {
+    height: 7px;
+  }
+  .header .headerNav .burgerBlock span:nth-child(2), .header .headerNav .burgerBlock span:nth-child(3) {
+    top: 12px;
+  }
+  .header .headerNav .burgerBlock span:nth-child(4) {
+    top: 24px;
+  }
+  .header .headerImg {
+    border-radius: 90px 0;
+    width: 85%;
+    margin: 23px 0 0;
+  }
+  .header .headerImg img {
+    border-radius: 90px 0;
+    top: -17px;
+    left: -17px;
+  }
+  .main .sectionAboutUs .aboutUsWrapper .aboutUsImg {
+    border-radius: 90px 0;
+    width: 85%;
+  }
+  .main .sectionAboutUs .aboutUsWrapper .aboutUsImg img {
+    border-radius: 90px 0;
+  }
+  .main .sectionSuccess {
+    gap: 20px;
+  }
+  .main .sectionSuccess .successText .textImageSuccess p {
+    font-size: 165px;
+    line-height: 140px;
+  }
+  .main .sectionSuccess .successText h2 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .main .sectionSuccess .successImg {
+    width: 85%;
+    border-radius: 90px 0;
+  }
+  .main .sectionSuccess .successImg img {
+    border-radius: 90px 0;
+  }
+  .main .sectionCompletedWork {
+    padding: 50px 0;
+    margin: 70px auto;
+  }
+  .main .sectionCompletedWork .completeInfoBlock {
+    -ms-grid-columns: (145px)[2];
+        grid-template-columns: repeat(2, 145px);
+    -ms-grid-rows: minmax(130px, 145px);
+        grid-template-rows: minmax(130px, 145px);
+    grid-auto-rows: minmax(130px, 145px);
+    gap: 35px;
+    margin-top: 40px;
+  }
+  .main .sectionCompletedWork .completeTitleBlock h3 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .main .sectionBlog .blogCardContainer {
+    gap: 40px;
+  }
+  .main .sectionBlog .blogCardContainer .blogCard .blogCardImg {
+    border-radius: 90px 0px;
+  }
+  .main .sectionBlog .blogCardContainer .blogCard .blogCardImg img {
+    border-radius: 90px 0px;
+    right: 10px;
+    bottom: 10px;
+  }
+  .main .sectionSignUp {
+    margin: 0 auto;
+  }
+  .main .sectionSignUp .signUpBlockText h3 {
+    letter-spacing: 5px;
+  }
+  .main .sectionSignUp .signUpBlockText p {
+    width: 100%;
+  }
+  .main .sectionSignUp .signUpBlockInput input {
+    width: 330px;
+  }
+  .footer .footerWrapper {
+    -ms-grid-rows: 150px 1fr 1fr 80px;
+        grid-template-rows: 150px 1fr 1fr 80px;
+  }
+  .footer .footerWrapper .copyright {
+    text-align: center;
   }
 }
 /*# sourceMappingURL=media.css.map */

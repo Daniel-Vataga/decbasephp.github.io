@@ -477,7 +477,9 @@ body {
   -ms-grid-column: 1;
   grid-area: aboutUsImg;
   border-radius: 140px 0px;
-  display: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .main .sectionAboutUs .aboutUsWrapper .aboutUsImg img {
@@ -544,6 +546,10 @@ body {
 .main .sectionAboutUs .aboutUsWrapper .aboutUsText .aboutUsTextButton:focus, .main .sectionAboutUs .aboutUsWrapper .aboutUsText .aboutUsTextButton:active {
   border: none;
   outline: none;
+}
+
+.main .sectionAboutUs .aboutUsWrapper .aboutUsShowImg {
+  display: none;
 }
 
 .main .sectionSuccess {
@@ -619,7 +625,9 @@ body {
   grid-area: successImg;
   border: 2px solid #B0855B;
   border-radius: 140px 0px;
-  display: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .main .sectionSuccess .successImg img {
@@ -640,7 +648,7 @@ body {
   display: -ms-grid;
   display: grid;
   margin: 200px auto;
-  background-color: grey;
+  background-color: #F8F8F8;
       grid-template-areas: 'completeTitleBlock' 'completeInfoBlock';
   padding: 100px 0;
 }
