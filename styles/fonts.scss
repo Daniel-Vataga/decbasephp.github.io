@@ -1,29 +1,53 @@
 @font-face {
-    font-family: Poppins-SemiBold;
-    src: url(../fonts/Poppins/Poppins-SemiBold.ttf);
+    font-family: 'Poppins-SemiBold';
+    src:
+        url("../fonts/Poppins/Poppins-SemiBold.woff2") format("woff2") 
+        url("../fonts/Poppins/Poppins-SemiBold.woff") format("woff");
+        font-weight: 600;
+    font-style: normal;
 }
 
 @font-face {
-    font-family: Poppins-Bold;
-    src: url(../fonts/Poppins/Poppins-Bold.ttf);
+    font-family: 'Poppins-Bold';
+    src:
+        url("../fonts/Poppins/Poppins-Bold.woff2") format("woff2") 
+        url("../fonts/Poppins/Poppins-Bold.woff") format("woff");
+        font-weight: 700;
+    font-style: normal;
 }
 
 @font-face {
-    font-family: Poppins-Regular;
-    src: url(../fonts/Poppins/Poppins-Regular.ttf);
+    font-family: 'Poppins-Regular';
+    src:
+        url("../fonts/Poppins/Poppins-Regular.woff2") format("woff2") 
+        url("../fonts/Poppins/Poppins-Regular.woff") format("woff");
+        font-weight: 400;
+    font-style: normal;
 }
 
 @font-face {
-    font-family: OpenSans-SemiBold;
-    src: url(../fonts/OpenSans/OpenSans-SemiBold.ttf);
+    font-family: 'OpenSans-SemiBold';
+    src:
+        url("../fonts/OpenSans/OpenSans-SemiBold.woff2") format("woff2") 
+        url("../fontsOpenSans/OpenSans-SemiBold.woff") format("woff");
+        font-weight: 600;
+    font-style: normal;
 }
 
 @font-face {
-    font-family: OpenSans-Regular;
-    src: url(../fonts/OpenSans/OpenSans-Regular.ttf);
+    font-family: 'OpenSans-Regular';
+    src:
+        url("../fonts/OpenSans/OpenSans-Regular.woff2") format("woff2") 
+        url("../fontsOpenSans/OpenSans-Regular.woff") format("woff");
+        font-weight: 400;
+    font-style: normal;
 }
 
 @font-face {
-    font-family: Ralewat-Medium;
-    src: url(../fonts/Raleway/Raleway-Medium.ttf);
+    font-family: 'Raleway-Medium';
+    src:
+        url("../fonts/Raleway/Raleway-Medium.woff2") format("woff2") 
+        url("../fontsRaleway/Raleway-Medium.woff") format("woff");
+        font-weight: 500;
+    font-style: normal;
 }
