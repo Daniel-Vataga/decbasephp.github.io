@@ -10,7 +10,7 @@ $(document).ready(function () {
 			
 		}
 		else {
-			$('.headerNavMobile').css('top', '-130%');
+			$('.headerNavMobile').css('top', '-100%');
 			$('.headerNavMobile').css('opacity', '0');
 
 			$('body').css('overflow', 'unset');

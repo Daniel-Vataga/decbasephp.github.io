@@ -1,29 +1,30 @@
 @font-face {
-    font-family: Poppins-SemiBold;
-    src: url(../fonts/Poppins/Poppins-SemiBold.ttf);
+  font-family: Poppins-SemiBold;
+  src: url(../fonts/Poppins/Poppins-SemiBold.ttf);
 }
 
 @font-face {
-    font-family: Poppins-Bold;
-    src: url(../fonts/Poppins/Poppins-Bold.ttf);
+  font-family: Poppins-Bold;
+  src: url(../fonts/Poppins/Poppins-Bold.ttf);
 }
 
 @font-face {
-    font-family: Poppins-Regular;
-    src: url(../fonts/Poppins/Poppins-Regular.ttf);
+  font-family: Poppins-Regular;
+  src: url(../fonts/Poppins/Poppins-Regular.ttf);
 }
 
 @font-face {
-    font-family: OpenSans-SemiBold;
-    src: url(../fonts/OpenSans/OpenSans-SemiBold.ttf);
+  font-family: OpenSans-SemiBold;
+  src: url(../fonts/OpenSans/OpenSans-SemiBold.ttf);
 }
 
 @font-face {
-    font-family: OpenSans-Regular;
-    src: url(../fonts/OpenSans/OpenSans-Regular.ttf);
+  font-family: OpenSans-Regular;
+  src: url(../fonts/OpenSans/OpenSans-Regular.ttf);
 }
 
 @font-face {
-    font-family: Ralewat-Medium;
-    src: url(../fonts/Raleway/Raleway-Medium.ttf);
+  font-family: Ralewat-Medium;
+  src: url(../fonts/Raleway/Raleway-Medium.ttf);
 }
+/*# sourceMappingURL=fonts.css.map */

@@ -77,6 +77,13 @@
 }
 
 @media screen and (max-width: 1100px) {
+  .header .headerImg {
+    display: table;
+  }
+  .header .headerImg img:hover {
+    top: -33px;
+    left: -33px;
+  }
   .header .headerNav .desktopMenu {
     display: none;
   }
@@ -88,7 +95,7 @@
     display: -ms-flexbox;
     display: flex;
     position: fixed;
-    top: -130%;
+    top: -100%;
     z-index: 999;
     width: 100%;
     height: 100vh;
@@ -126,6 +133,18 @@
     font-size: 35px;
     line-height: 67px;
   }
+  .main .sectionAboutUs .aboutUsWrapper .aboutUsImg {
+    display: table;
+  }
+  .main .sectionAboutUs .aboutUsWrapper .aboutUsImg img {
+    pointer-events: none;
+  }
+  .main .sectionSuccess .successImg {
+    display: table;
+  }
+  .main .sectionSuccess .successImg img {
+    pointer-events: none;
+  }
   .main .sectionCompletedWork .completeInfoBlock {
     gap: 70px;
   }
@@ -133,6 +152,12 @@
     -ms-grid-rows: 1fr 65px 75px 90px;
         grid-template-rows: 1fr 65px 75px 90px;
     row-gap: 20px;
+  }
+  .main .sectionBlog .blogCardContainer .blogCard .blogCardImg {
+    display: table;
+  }
+  .main .sectionBlog .blogCardContainer .blogCard .blogCardImg img {
+    pointer-events: none;
   }
   .main .sectionBlog .blogCardContainer .blogCard h4 {
     -ms-flex-item-align: baseline;
@@ -355,18 +380,6 @@
     -ms-grid-column-align: center;
         justify-self: center;
   }
-  .main .sectionSuccess .successImg img {
-    border-radius: 140px 0px;
-    position: relative;
-    right: -30px;
-    bottom: -30px;
-    -webkit-transition: all .5s ease;
-    transition: all .5s ease;
-  }
-  .main .sectionSuccess .successImg img:hover {
-    right: 0;
-    bottom: 0;
-  }
   .main .sectionBlog {
     padding: 50px 0 0;
     margin: 50px 0 0;
@@ -451,6 +464,10 @@
     -ms-grid-column-align: center;
         justify-self: center;
   }
+  .header .headerImg img {
+    right: -20px;
+    bottom: -20px;
+  }
   .main .sectionServices .servicesSpan {
     font-size: 15px;
   }
@@ -478,8 +495,8 @@
     padding: 10px 60px;
   }
   .main .sectionSuccess .successImg img {
-    right: -16px;
-    bottom: -16px;
+    right: -20px;
+    bottom: -20px;
   }
   .main .sectionCompletedWork {
     margin: 100px auto;
@@ -545,8 +562,8 @@
     margin: 50px 30px;
   }
   .main .sectionBlog .blogCardContainer .blogCard {
-    -ms-grid-rows: 1fr 37px 43px 80px;
-        grid-template-rows: 1fr 37px 43px 80px;
+    -ms-grid-rows: 1fr 37px 70px 80px;
+        grid-template-rows: 1fr 37px 70px 80px;
   }
   .main .sectionBlog .blogCardContainer .blogCard h4 {
     font-size: 25px;
@@ -554,10 +571,6 @@
   .main .sectionBlog .blogCardContainer .blogCard p {
     font-size: 15px;
     line-height: 22px;
-  }
-  .main .sectionBlog .blogCardContainer .blogCardTwo {
-    -ms-grid-rows: 1fr 37px 73px 80px;
-        grid-template-rows: 1fr 37px 73px 80px;
   }
   .main .sectionSignUp .signUpBlockText h3 {
     font-size: 30px;
