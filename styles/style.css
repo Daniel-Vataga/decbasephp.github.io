@@ -1,41 +1,41 @@
 @font-face {
   font-family: 'Poppins-SemiBold';
-  src: url("../fonts/Poppins/Poppins-SemiBold.woff2") format("woff2") url("../fonts/Poppins/Poppins-SemiBold.woff") format("woff");
+  src: url("../fonts/Poppins/Poppins-SemiBold.woff2") format("woff2") url("../fonts/Poppins/Poppins-SemiBold.woff") format("woff") url("../fonts/Poppins/Poppins-SemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Poppins-Bold';
-  src: url("../fonts/Poppins/Poppins-Bold.woff2") format("woff2") url("../fonts/Poppins/Poppins-Bold.woff") format("woff");
+  src: url("../fonts/Poppins/Poppins-Bold.woff2") format("woff2") url("../fonts/Poppins/Poppins-Bold.woff") format("woff") url("../fonts/Poppins/Poppins-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Poppins-Regular';
-  src: url("../fonts/Poppins/Poppins-Regular.woff2") format("woff2") url("../fonts/Poppins/Poppins-Regular.woff") format("woff");
+  src: url("../fonts/Poppins/Poppins-Regular.woff2") format("woff2") url("../fonts/Poppins/Poppins-Regular.woff") format("woff") url("../fonts/Poppins/Poppins-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'OpenSans-SemiBold';
-  src: url("../fonts/OpenSans/OpenSans-SemiBold.woff2") format("woff2") url("../fontsOpenSans/OpenSans-SemiBold.woff") format("woff");
+  src: url("../fonts/OpenSans/OpenSans-SemiBold.woff2") format("woff2") url("../fonts/OpenSans/OpenSans-SemiBold.woff") format("woff") url("../fonts/OpenSans/OpenSans-SemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'OpenSans-Regular';
-  src: url("../fonts/OpenSans/OpenSans-Regular.woff2") format("woff2") url("../fontsOpenSans/OpenSans-Regular.woff") format("woff");
+  src: url("../fonts/OpenSans/OpenSans-Regular.woff2") format("woff2") url("../fonts/OpenSans/OpenSans-Regular.woff") format("woff") url("../fonts/OpenSans/OpenSans-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Ralewat-Medium';
-  src: url("../fonts/Raleway/Raleway-Medium.woff2") format("woff2") url("../fontsRaleway/Raleway-Medium.woff") format("woff");
+  font-family: 'Raleway-Medium';
+  src: url("../fonts/Raleway/Raleway-Medium.woff2") format("woff2") url("../fonts/Raleway/Raleway-Medium.woff") format("woff") url("../fonts/Raleway/Raleway-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
@@ -80,7 +80,9 @@ body {
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   gap: 30px;
-      grid-template-areas: 'headerLogo headerNav' '. .' 'headerText headerImg';
+      grid-template-areas: 'headerLogo headerNav'
+ '. .'
+ 'headerText headerImg';
 }
 
 .header .headerLogo {
@@ -379,7 +381,9 @@ body {
   -webkit-column-gap: 40px;
           column-gap: 40px;
   margin-top: 100px;
-      grid-template-areas: 'servicesSpan ... ...' 'servicesTitle servicesTitle servicesTitle' 'designServ ArchitectServ planServ';
+      grid-template-areas: 'servicesSpan ... ...'
+ 'servicesTitle servicesTitle servicesTitle'
+ 'designServ ArchitectServ planServ';
 }
 
 .main .sectionServices .servicesSpan {
@@ -429,7 +433,8 @@ body {
   display: grid;
   -ms-grid-columns: 70px 1fr;
       grid-template-columns: 70px 1fr;
-      grid-template-areas: 'serviceSvg serviceTitle' 'serviceSvg serviceText';
+      grid-template-areas: 'serviceSvg serviceTitle'
+ 'serviceSvg serviceText';
   -webkit-box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.14);
           box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.14);
   border-radius: 60px 0px;
@@ -693,7 +698,8 @@ body {
   display: grid;
   margin: 200px auto;
   background-color: #F8F8F8;
-      grid-template-areas: 'completeTitleBlock' 'completeInfoBlock';
+      grid-template-areas: 'completeTitleBlock'
+ 'completeInfoBlock';
   padding: 100px 0;
 }
 
@@ -967,7 +973,10 @@ body {
 .main .sectionBlog .blogCardContainer .blogCard {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: 'img' 'title' 'description' 'button';
+      grid-template-areas: 'img'
+ 'title'
+ 'description'
+ 'button';
   -ms-grid-columns: minmax(350px, 620px);
       grid-template-columns: minmax(350px, 620px);
   -ms-grid-rows: 1fr 65px 75px 110px;
@@ -1187,7 +1196,8 @@ body {
   display: grid;
   max-width: 1440px;
   margin: 0 auto;
-      grid-template-areas: 'logo quick company contact follow' 'copyright copyright copyright copyright copyright';
+      grid-template-areas: 'logo quick company contact follow'
+ 'copyright copyright copyright copyright copyright';
   -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   -ms-grid-rows: 1fr 60px;
