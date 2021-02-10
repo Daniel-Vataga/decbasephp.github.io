@@ -80,9 +80,8 @@
   .header .headerImg {
     display: table;
   }
-  .header .headerImg img:hover {
-    top: -33px;
-    left: -33px;
+  .header .headerImg img {
+    pointer-events: none;
   }
   .header .headerNav .desktopMenu {
     display: none;

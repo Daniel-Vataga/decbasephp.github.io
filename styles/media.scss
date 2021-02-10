@@ -117,12 +117,7 @@
             display: table;
 
             img {
-
-
-                &:hover {
-                    top: -33px;
-                    left: -33px;
-                }
+                pointer-events: none;
             }
         }
 
@@ -255,10 +250,6 @@
                 font-size: 14px;
                 line-height: 22px;
             }
-        }
-
-        .headerImg {
-            // display: table;
         }
     }
 
@@ -832,9 +823,6 @@
                     }
                 }
 
-                .blogCardTwo {
-                    // grid-template-rows: 1fr 37px 73px 80px;
-                }
             }
         }
 
