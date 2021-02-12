@@ -1,19 +1,24 @@
-$(document).ready(function () {
-	$('#burgerBtn').click(function () {
-		$(this).toggleClass('open');
+const burger = document.getElementById('burgerBtn');
+const headerNavMobile = document.querySelector('.headerNavMobile');
 
-		if ($('#burgerBtn').hasClass('open')) {
-			$('.headerNavMobile').css('top', '0');
-			$('.headerNavMobile').css('opacity', '1');
+function openMenu() {
+	headerNavMobile.style.top = '0';
+	headerNavMobile.style.opacity = '1';
+	document.body.style.overflow = 'hidden';
+}
 
-			$('body').css('overflow', 'hidden');
-			
-		}
-		else {
-			$('.headerNavMobile').css('top', '-100%');
-			$('.headerNavMobile').css('opacity', '0');
+function closeMenu() {
+	headerNavMobile.style.top = '-100%';
+	headerNavMobile.style.opacity = '0';
+	document.body.style.overflow = 'unset';
+}
 
-			$('body').css('overflow', 'unset');
-		}
-	});
-});
+burger.addEventListener('click', () => {
+	burger.classList.toggle('open');
+
+	if (burger.classList.contains('open')) {
+		openMenu()
+	} else {
+		closeMenu()
+	}
+})

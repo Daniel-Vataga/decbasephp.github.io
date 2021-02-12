@@ -216,6 +216,7 @@
 
                     .blogCardImg {
                         display: table;
+
                         img {
                             pointer-events: none;
                         }
@@ -842,13 +843,18 @@
 
             .signUpBlockInput {
                 flex-direction: column;
+                border-radius: 20px;
+                width: 90%;
 
                 input {
-                    width: 400px;
+                    width: 100%;
+                    margin-bottom: 10px;
+                    margin: 0;
                 }
 
                 button {
                     padding: 16px;
+                    margin: 0;
                 }
             }
 
@@ -1021,6 +1027,16 @@
 
             .copyright {
                 text-align: center;
+            }
+
+            .footerFollow {
+                .socials {
+                    .footerSvgBlock {
+                        &:last-child {
+                            margin: 5px 5px 5px 0;
+                        }
+                    }
+                }
             }
         }
     }
