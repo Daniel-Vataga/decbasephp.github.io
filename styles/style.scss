@@ -406,15 +406,27 @@ $greyColor: #646464;
                 color: #fff;
                 transform: scale(1.05);
 
+                .serviceText {
+                    color: #fff;
+                }
+
+                .serviceSvg {
+                    svg {
+                        fill: #fff;
+                    }
+                }
+
             }
 
             .serviceSvg {
                 grid-area: serviceSvg;
                 width: 50px;
                 padding: 9px 0;
+                transition: all .3s ease;
 
-                img {
+                svg {
                     width: 100%;
+                    height: 50px;
                 }
             }
 
@@ -430,13 +442,7 @@ $greyColor: #646464;
                 font-family: 'OpenSans-Regular';
                 font-size: 18px;
                 color: $greyColor;
-
-                &:hover {
-                    color: #fff;
-                }
             }
-
-
         }
 
         .designServ {
@@ -552,17 +558,18 @@ $greyColor: #646464;
             .textImageSuccess {
                 background: url(../img/20BG1.jpg);
                 background-size: cover;
-                background-clip: text;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
+                // background-clip: text;
+                // -webkit-background-clip: text;
+                // -webkit-text-fill-color: transparent;
 
                 p {
-                    color: $brownColor;
+                    // color: $brownColor;
+                    background: #fff;
                     margin: 0;
                     font-family: 'Poppins-SemiBold';
                     font-size: 288px;
                     line-height: 300px;
-                    // mix-blend-mode: lighten;
+                    mix-blend-mode: lighten;
                 }
             }
 
@@ -718,17 +725,25 @@ $greyColor: #646464;
 
             .testArrow {
                 background-color: #fff;
-                padding: 7px 12px;
+                padding: 7px 10px;
                 border-radius: 50%;
                 color: #000;
                 box-shadow: -1px 3px 10px rgba(0, 0, 0, 0.3);
                 margin: 0 12px;
                 transition: all .3s ease;
 
+                svg {
+                    width: 12px;
+                    height: 12px;
+                }
+
                 &:hover {
                     background-color: $greenColor;
-                    color: #fff;
                     cursor: pointer;
+
+                    svg {
+                        fill: #fff
+                    }
                 }
             }
         }
@@ -1123,27 +1138,43 @@ $greyColor: #646464;
             display: flex;
             flex-direction: column;
 
-            i {
-                background-color: #D5D5D5;
-                line-height: 2.3;
-                text-align: center;
-                width: 37px;
-                height: 37px;
-                border-radius: 50%;
-                color: #fff;
-                transition: all .3s ease;
-                margin: 20px 3px;
+            .socials {
+                display: flex;
+                flex-wrap: wrap;
 
+                .footerSvgBlock {
+                    width: 35px;
+                    height: 35px;
+                    padding: 5px;
+                    background-color: #D5D5D5;
+                    border-radius: 50%;
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 5px;
 
-                &:first-child {
-                    margin: 0 3px 0 0;
-                }
+                    svg {
+                        color: #fff;
+                        transition: all .3s ease;
+                        width: 75%;
+                        height: 75%;
+                        fill: #fff;
 
-                &:hover {
-                    background-color: $greenColor;
-                    cursor: pointer;
+                    }
+
+                    &:hover {
+                        background-color: $greenColor;
+                        cursor: pointer;
+                    }
+
+                    &:first-child {
+                        margin: 5px 5px 5px 0;
+                    }
                 }
             }
+
+
         }
 
         .copyright {

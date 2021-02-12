@@ -583,12 +583,17 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    border-radius: 20px;
+    width: 90%;
   }
   .main .sectionSignUp .signUpBlockInput input {
-    width: 400px;
+    width: 100%;
+    margin-bottom: 10px;
+    margin: 0;
   }
   .main .sectionSignUp .signUpBlockInput button {
     padding: 16px;
+    margin: 0;
   }
   .footer .footerWrapper {
         grid-template-areas: 'logo logo' 'quick company' 'contact follow' 'copyright copyright';
@@ -698,6 +703,9 @@
   }
   .footer .footerWrapper .copyright {
     text-align: center;
+  }
+  .footer .footerWrapper .footerFollow .socials .footerSvgBlock:last-child {
+    margin: 5px 5px 5px 0;
   }
 }
 /*# sourceMappingURL=media.css.map */

@@ -1,41 +1,41 @@
 @font-face {
   font-family: 'Poppins-SemiBold';
-  src: url("../fonts/Poppins/Poppins-SemiBold.woff2") format("woff2") url("../fonts/Poppins/Poppins-SemiBold.woff") format("woff") url("../fonts/Poppins/Poppins-SemiBold.ttf") format("truetype");
+  src: url("../fonts/Poppins/Poppins-SemiBold.woff2") format("woff2"), url("../fonts/Poppins/Poppins-SemiBold.woff") format("woff"), url("../fonts/Poppins/Poppins-SemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Poppins-Bold';
-  src: url("../fonts/Poppins/Poppins-Bold.woff2") format("woff2") url("../fonts/Poppins/Poppins-Bold.woff") format("woff") url("../fonts/Poppins/Poppins-Bold.ttf") format("truetype");
+  src: url("../fonts/Poppins/Poppins-Bold.woff2") format("woff2"), url("../fonts/Poppins/Poppins-Bold.woff") format("woff"), url("../fonts/Poppins/Poppins-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Poppins-Regular';
-  src: url("../fonts/Poppins/Poppins-Regular.woff2") format("woff2") url("../fonts/Poppins/Poppins-Regular.woff") format("woff") url("../fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+  src: url("../fonts/Poppins/Poppins-Regular.woff2") format("woff2"), url("../fonts/Poppins/Poppins-Regular.woff") format("woff"), url("../fonts/Poppins/Poppins-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'OpenSans-SemiBold';
-  src: url("../fonts/OpenSans/OpenSans-SemiBold.woff2") format("woff2") url("../fonts/OpenSans/OpenSans-SemiBold.woff") format("woff") url("../fonts/OpenSans/OpenSans-SemiBold.ttf") format("truetype");
+  src: url("../fonts/OpenSans/OpenSans-SemiBold.woff2") format("woff2"), url("../fonts/OpenSans/OpenSans-SemiBold.woff") format("woff"), url("../fonts/OpenSans/OpenSans-SemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'OpenSans-Regular';
-  src: url("../fonts/OpenSans/OpenSans-Regular.woff2") format("woff2") url("../fonts/OpenSans/OpenSans-Regular.woff") format("woff") url("../fonts/OpenSans/OpenSans-Regular.ttf") format("truetype");
+  src: url("../fonts/OpenSans/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans/OpenSans-Regular.woff") format("woff"), url("../fonts/OpenSans/OpenSans-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Raleway-Medium';
-  src: url("../fonts/Raleway/Raleway-Medium.woff2") format("woff2") url("../fonts/Raleway/Raleway-Medium.woff") format("woff") url("../fonts/Raleway/Raleway-Medium.ttf") format("truetype");
+  src: url("../fonts/Raleway/Raleway-Medium.woff2") format("woff2"), url("../fonts/Raleway/Raleway-Medium.woff") format("woff"), url("../fonts/Raleway/Raleway-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
@@ -80,9 +80,7 @@ body {
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   gap: 30px;
-      grid-template-areas: 'headerLogo headerNav'
- '. .'
- 'headerText headerImg';
+      grid-template-areas: 'headerLogo headerNav' '. .' 'headerText headerImg';
 }
 
 .header .headerLogo {
@@ -381,9 +379,7 @@ body {
   -webkit-column-gap: 40px;
           column-gap: 40px;
   margin-top: 100px;
-      grid-template-areas: 'servicesSpan ... ...'
- 'servicesTitle servicesTitle servicesTitle'
- 'designServ ArchitectServ planServ';
+      grid-template-areas: 'servicesSpan ... ...' 'servicesTitle servicesTitle servicesTitle' 'designServ ArchitectServ planServ';
 }
 
 .main .sectionServices .servicesSpan {
@@ -433,8 +429,7 @@ body {
   display: grid;
   -ms-grid-columns: 70px 1fr;
       grid-template-columns: 70px 1fr;
-      grid-template-areas: 'serviceSvg serviceTitle'
- 'serviceSvg serviceText';
+      grid-template-areas: 'serviceSvg serviceTitle' 'serviceSvg serviceText';
   -webkit-box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.14);
           box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.14);
   border-radius: 60px 0px;
@@ -452,6 +447,14 @@ body {
           transform: scale(1.05);
 }
 
+.main .sectionServices .servicesBlock:hover .serviceText {
+  color: #fff;
+}
+
+.main .sectionServices .servicesBlock:hover .serviceSvg svg {
+  fill: #fff;
+}
+
 .main .sectionServices .servicesBlock .serviceSvg {
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
@@ -459,10 +462,13 @@ body {
   grid-area: serviceSvg;
   width: 50px;
   padding: 9px 0;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
-.main .sectionServices .servicesBlock .serviceSvg img {
+.main .sectionServices .servicesBlock .serviceSvg svg {
   width: 100%;
+  height: 50px;
 }
 
 .main .sectionServices .servicesBlock .serviceSubtitle {
@@ -481,10 +487,6 @@ body {
   font-family: 'OpenSans-Regular';
   font-size: 18px;
   color: #646464;
-}
-
-.main .sectionServices .servicesBlock .serviceText:hover {
-  color: #fff;
 }
 
 .main .sectionServices .designServ {
@@ -621,17 +623,15 @@ body {
 .main .sectionSuccess .successText .textImageSuccess {
   background: url(../img/20BG1.jpg);
   background-size: cover;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .main .sectionSuccess .successText .textImageSuccess p {
-  color: #CAA892;
+  background: #fff;
   margin: 0;
   font-family: 'Poppins-SemiBold';
   font-size: 288px;
   line-height: 300px;
+  mix-blend-mode: lighten;
 }
 
 .main .sectionSuccess .successText h2 {
@@ -698,8 +698,7 @@ body {
   display: grid;
   margin: 200px auto;
   background-color: #F8F8F8;
-      grid-template-areas: 'completeTitleBlock'
- 'completeInfoBlock';
+      grid-template-areas: 'completeTitleBlock' 'completeInfoBlock';
   padding: 100px 0;
 }
 
@@ -826,7 +825,7 @@ body {
 
 .main .sectionTestimonials .testimonialsArrows .testArrow {
   background-color: #fff;
-  padding: 7px 12px;
+  padding: 7px 10px;
   border-radius: 50%;
   color: #000;
   -webkit-box-shadow: -1px 3px 10px rgba(0, 0, 0, 0.3);
@@ -836,10 +835,18 @@ body {
   transition: all .3s ease;
 }
 
+.main .sectionTestimonials .testimonialsArrows .testArrow svg {
+  width: 12px;
+  height: 12px;
+}
+
 .main .sectionTestimonials .testimonialsArrows .testArrow:hover {
   background-color: #37806B;
-  color: #fff;
   cursor: pointer;
+}
+
+.main .sectionTestimonials .testimonialsArrows .testArrow:hover svg {
+  fill: #fff;
 }
 
 .main .sectionTestimonials .testimonialsTitle {
@@ -973,10 +980,7 @@ body {
 .main .sectionBlog .blogCardContainer .blogCard {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: 'img'
- 'title'
- 'description'
- 'button';
+      grid-template-areas: 'img' 'title' 'description' 'button';
   -ms-grid-columns: minmax(350px, 620px);
       grid-template-columns: minmax(350px, 620px);
   -ms-grid-rows: 1fr 65px 75px 110px;
@@ -1196,8 +1200,7 @@ body {
   display: grid;
   max-width: 1440px;
   margin: 0 auto;
-      grid-template-areas: 'logo quick company contact follow'
- 'copyright copyright copyright copyright copyright';
+      grid-template-areas: 'logo quick company contact follow' 'copyright copyright copyright copyright copyright';
   -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   -ms-grid-rows: 1fr 60px;
@@ -1297,26 +1300,49 @@ body {
           flex-direction: column;
 }
 
-.footer .footerWrapper .footerFollow i {
+.footer .footerWrapper .footerFollow .socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.footer .footerWrapper .footerFollow .socials .footerSvgBlock {
+  width: 35px;
+  height: 35px;
+  padding: 5px;
   background-color: #D5D5D5;
-  line-height: 2.3;
-  text-align: center;
-  width: 37px;
-  height: 37px;
   border-radius: 50%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5px;
+}
+
+.footer .footerWrapper .footerFollow .socials .footerSvgBlock svg {
   color: #fff;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
-  margin: 20px 3px;
+  width: 75%;
+  height: 75%;
+  fill: #fff;
 }
 
-.footer .footerWrapper .footerFollow i:first-child {
-  margin: 0 3px 0 0;
-}
-
-.footer .footerWrapper .footerFollow i:hover {
+.footer .footerWrapper .footerFollow .socials .footerSvgBlock:hover {
   background-color: #37806B;
   cursor: pointer;
+}
+
+.footer .footerWrapper .footerFollow .socials .footerSvgBlock:first-child {
+  margin: 5px 5px 5px 0;
 }
 
 .footer .footerWrapper .copyright {

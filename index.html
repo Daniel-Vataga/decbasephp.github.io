@@ -7,6 +7,7 @@
     <title>Decbase</title>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <!-- <link rel="stylesheet" href="./scripts/AOS/aos.css"> -->
     <link rel="stylesheet" href="styles/fonts.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/media.css">
@@ -52,15 +53,16 @@
                 </nav>
 
                 <div class="headerText">
-                    <span>MODERN INTERIOR</span>
-                    <h1>Create Your Interior Design.</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    <span data-aos="fade-up" data-aos-delay="150">MODERN INTERIOR</span>
+                    <h1 data-aos="fade-up" data-aos-delay="150">Create Your Interior Design.</h1>
+                    <p data-aos="fade-up" data-aos-delay="250">Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                         veniam, quis nostrud exercitation.</p>
-                    <button class="headerTextButton">Contact</button>
+                    <button class="headerTextButton" data-aos="fade-up" data-aos-delay="350">Contact</button>
                 </div>
-                <div class="headerImg">
-                    <img src="./img/headerImg.png" alt="headerImg">
+                <div class="headerImg" data-aos="fade-up" data-aos-delay="150">
+                    <img src="./img/headerImg.png" alt="headerImg" data-aos="fade-up" data-aos-delay="300">
                 </div>
             </header>
         </div>
@@ -72,35 +74,34 @@
                 <div class="servicesTitle">
                     <h2>Our Service</h2>
                 </div>
-                <!-- <div class="servicesArrows">
-                    <div class="leftArrow navArrow">
-                        <i class="fas fa-angle-left"></i>
-                    </div>
-                    <div class="rightArrow navArrow">
-                        <i class="fas fa-angle-right"></i>
-                    </div>
-                </div> -->
-                <div class="servicesBlock designServ">
+                <div class="servicesBlock designServ" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50">
                     <div class="serviceSvg">
-                        <img src="./img/svg/design.svg" alt="">
+                        <svg class="design">
+                            <use xlink:href="img/svg/sprite.svg#design"></use>
+                        </svg>
                     </div>
                     <h4 class="serviceSubtitle">Interior Design</h4>
                     <p class="serviceText">Lorem ipsum dolor amet consectetur
                         adipiscing elit sed eiusmod tempor
                         incididunt ut labore.</p>
                 </div>
-                <div class="servicesBlock ArchitectServ">
+                <div class="servicesBlock ArchitectServ" data-aos="fade-up" data-aos-offset="200" data-aos-delay="150"
+                    data-aos-anchor-placement="top-bottom">
                     <div class="serviceSvg">
-                        <img src="./img/svg/architecture.svg" alt="">
+                        <svg class="architecture">
+                            <use xlink:href="img/svg/sprite.svg#architecture"></use>
+                        </svg>
                     </div>
                     <h4 class="serviceSubtitle">Architecture</h4>
                     <p class="serviceText">Lorem ipsum dolor amet consectetur
                         adipiscing elit sed eiusmod tempor
                         incididunt ut labore.</p>
                 </div>
-                <div class="servicesBlock planServ">
+                <div class="servicesBlock planServ" data-aos="fade-up" data-aos-offset="200" data-aos-delay="250">
                     <div class="serviceSvg">
-                        <img src="./img/svg/planning.svg" alt="">
+                        <svg class="planning">
+                            <use xlink:href="img/svg/sprite.svg#planning"></use>
+                        </svg>
                     </div>
                     <h4 class="serviceSubtitle">Planning</h4>
                     <p class="serviceText">Lorem ipsum dolor amet consectetur
@@ -110,13 +111,16 @@
             </section>
             <section class="sectionAboutUs maxSize">
                 <div class="aboutUsWrapper">
-                    <div class="aboutUsImg">
-                        <img src="./img/aboutUs.png" alt="aboutUsImg">
+                    <div class="aboutUsImg" data-aos="fade-up" data-aos-delay="150" data-aos-offset="150">
+                        <img src="./img/aboutUs.png" alt="aboutUsImg" data-aos="fade-up" data-aos-delay="300"
+                            data-aos-offset="150">
                     </div>
                     <div class="aboutUsText">
-                        <span>ABOUT US</span>
-                        <h2>Interioris The Will of An Epoch Mextreo</h2>
-                        <p>There are many variations of passages of Lorem Ipsum available,
+                        <span data-aos="fade-up" data-aos-delay="150" data-aos-offset="150">ABOUT US</span>
+                        <h2 data-aos="fade-up" data-aos-delay="150" data-aos-offset="150">Interioris The Will of An
+                            Epoch Mextreo</h2>
+                        <p data-aos="fade-up" data-aos-delay="250" data-aos-offset="150">There are many variations of
+                            passages of Lorem Ipsum available,
                             but the majority have suffered alteration in some form injected
                             humour, or randomised words which don't look even slightly
                             believable.If you are going to use a passage of Lorem Ipsum,
@@ -124,23 +128,26 @@
                             All the Lorem Ipsum generators on the Internettend to repeat
                             predefined chunks as necessary,making this the first true
                             generator on the Internet.</p>
-                        <button class="aboutUsTextButton">Learn more</button>
+                        <button class="aboutUsTextButton" data-aos="fade-up" data-aos-delay="350">Learn more</button>
                         <!-- <button class="aboutUsShowImg">Show Image <i class="far fa-image"></i></button> -->
                     </div>
                 </div>
             </section>
             <section class="sectionSuccess maxSize">
                 <div class="successText">
-                    <div class="textImageSuccess">
+                    <div class="textImageSuccess" data-aos="fade-up" data-aos-delay="150" data-aos-offset="150">
                         <p>
                             20
                         </p>
                     </div>
-                    <h2>Years Of Successful Working The Market</h2>
-                    <button class="successTextButton">read more</button>
+                    <h2 data-aos="fade-up" data-aos-delay="250" data-aos-offset="150">Years Of Successful Working The
+                        Market</h2>
+                    <button class="successTextButton" data-aos="fade-up" data-aos-delay="350" data-aos-offset="150">read
+                        more</button>
                 </div>
-                <div class="successImg">
-                    <img src="./img/successImg.png" alt="successImg">
+                <div class="successImg" data-aos="fade-up" data-aos-delay="150" data-aos-offset="150">
+                    <img src="./img/successImg.png" alt="successImg" data-aos="fade-up" data-aos-delay="300"
+                        data-aos-offset="150">
                 </div>
             </section>
             <section class="sectionCompletedWork">
@@ -148,25 +155,25 @@
                     <h3>3000+ Completed Work Which WE have Successfully Done</h3>
                 </div>
                 <div class="completeInfoBlock">
-                    <div class="statBlock statProject">
+                    <div class="statBlock statProject" data-aos="fade-up" data-aos-delay="50" data-aos-offset="200">
                         <div class="statInfo">
                             <strong>980</strong>
                             <span>Projects</span>
                         </div>
                     </div>
-                    <div class="statBlock statClient">
+                    <div class="statBlock statClient" data-aos="fade-up" data-aos-delay="200" data-aos-offset="200">
                         <div class="statInfo">
                             <strong>520</strong>
                             <span>Happy Client</span>
                         </div>
                     </div>
-                    <div class="statBlock statwinners">
+                    <div class="statBlock statwinners" data-aos="fade-up" data-aos-delay="350" data-aos-offset="200">
                         <div class="statInfo">
                             <strong>330</strong>
                             <span>Winners</span>
                         </div>
                     </div>
-                    <div class="statBlock statRecommend">
+                    <div class="statBlock statRecommend" data-aos="fade-up" data-aos-delay="500" data-aos-offset="200">
                         <div class="statInfo">
                             <strong>120</strong>
                             <span>Recommends</span>
@@ -182,10 +189,18 @@
                 <div class="testimonialsFeedback">
                     <div class="testimonialsArrows">
                         <div class="leftArrow testArrow">
-                            <i class="fas fa-angle-left"></i>
+                            <!-- <i class="fas fa-angle-left"></i> -->
+                            <svg class="leftArrow">
+                                <use xlink:href="img/svg/sprite.svg#leftArrow"></use>
+                            </svg>
+
                         </div>
                         <div class="rightArrow testArrow">
-                            <i class="fas fa-angle-right"></i>
+                            <!-- <i class="fas fa-angle-right"></i> -->
+                            <svg class="rightArrow">
+                                <use xlink:href="img/svg/sprite.svg#rightArrow"></use>
+                            </svg>
+
                         </div>
                     </div>
                     <div class="feedbackBlock">
@@ -302,10 +317,26 @@
                 <div class="footerFollow">
                     <strong class="footerStrongTitle">Follow us</strong>
                     <div class="socials">
-                        <i class="fab fa-facebook-f"></i>
-                        <i class="fab fa-twitter"></i>
-                        <i class="fab fa-instagram"></i>
-                        <i class="fab fa-linkedin-in"></i>
+                        <div class="footerSvgBlock">
+                            <svg class="facebook">
+                                <use xlink:href="img/svg/sprite.svg#facebook"></use>
+                            </svg>
+                        </div>
+                        <div class="footerSvgBlock">
+                            <svg class="twitter">
+                                <use xlink:href="img/svg/sprite.svg#twitter"></use>
+                            </svg>
+                        </div>
+                        <div class="footerSvgBlock">
+                            <svg class="instagram">
+                                <use xlink:href="img/svg/sprite.svg#instagram"></use>
+                            </svg>
+                        </div>
+                        <div class="footerSvgBlock">
+                            <svg class="linkedin">
+                                <use xlink:href="img/svg/sprite.svg#linkedin"></use>
+                            </svg>
+                        </div>
                     </div>
                 </div>
                 <div class="copyright">
@@ -315,8 +346,9 @@
         </footer>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.js"
-        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <!-- <script src="./scripts/AOS/aos.js"></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script> -->
     <script src="./scripts/main.js"></script>
 </body>
 
