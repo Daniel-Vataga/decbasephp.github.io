@@ -823,6 +823,21 @@ body {
   margin: 80px 0 20px;
 }
 
+.main .sectionTestimonials .testimonialsArrows button {
+  background-color: #fff;
+  border: none;
+  padding: 0;
+}
+
+.main .sectionTestimonials .testimonialsArrows button:disabled .testArrow, .main .sectionTestimonials .testimonialsArrows button[disabled] .testArrow {
+  background-color: #cccccc;
+  pointer-events: none;
+}
+
+.main .sectionTestimonials .testimonialsArrows button:focus {
+  outline: none;
+}
+
 .main .sectionTestimonials .testimonialsArrows .testArrow {
   background-color: #fff;
   padding: 7px 10px;
@@ -930,6 +945,13 @@ body {
   cursor: pointer;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+}
+
+.main .sectionTestimonials .feedbackBlock .secondSlide {
+  display: none;
+  opacity: 0;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
 .main .sectionBlog {
