@@ -5,7 +5,7 @@ require_once('php/phpmailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
 $mail->CharSet = 'utf-8';
 
-$email = $_POST['userEmail'];
+$email = $_POST['user_email'];
 
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
@@ -15,10 +15,12 @@ $mail->SMTPAuth = true;                               // Enable SMTP authenticat
 $mail->Username = 'mikewazowski7733@gmail.com'; // Ваш логин от почты с которой будут отправляться письма
 $mail->Password = '123695478'; // Ваш пароль от почты с которой будут отправляться письма
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
-$mail->Port = 587; // TCP port to connect to / этот порт может отличаться у других провайдеров
+$mail->Port = 567; // TCP port to connect to / этот порт может отличаться у других провайдеров
 
 $mail->setFrom('mikewazowski7733@gmail.com'); // от кого будет уходить письмо?
-$mail->addAddress('boohar1k32@gmail.com');     // Кому будет уходить письмо 
+// $mail->addAddress('boohar1k32@gmail.com');     // Кому будет уходить письмо 
+$mail->addAddress($email);     // Кому будет уходить письмо 
+
 //$mail->addAddress('ellen@example.com');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
 //$mail->addCC('cc@example.com');
@@ -28,7 +30,7 @@ $mail->addAddress('boohar1k32@gmail.com');     // Кому будет уходи
 $mail->isHTML(true);                                  // Set email format to HTML
 
 $mail->Subject = 'Заявка с тестового сайта';
-$mail->Body    = '' .$email . ' оставил заявку, его телефон ';
+$mail->Body    = '' .$email . ' оставил заявку';
 $mail->AltBody = '';
 
 if(!$mail->send()) {
