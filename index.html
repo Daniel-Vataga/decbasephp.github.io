@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decbase</title>
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <!-- <link rel="stylesheet" href="./scripts/AOS/aos.css"> -->
+
+    <link rel="stylesheet" href="./scripts/AOS/aos.css">
     <link rel="stylesheet" href="styles/fonts.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/media.css">
@@ -16,11 +15,11 @@
 
 <body>
     <div class="wrapper">
-        <nav class="headerNavMobile">
+        <nav class="headerNavMobile scrollNav">
             <ul>
                 <li><a href="#" class="headerNavLink">Home</a></li>
                 <li><a href="#" class="headerNavLink">Projects</a></li>
-                <li><a href="#" class="headerNavLink">Services</a></li>
+                <li><a href="#sectionServices" class="headerNavLink">Services</a></li>
                 <li><a href="#" class="headerNavLink">About</a></li>
                 <li><a href="#" class="headerNavLink">Blog</a></li>
                 <li><a href="#" class="headerNavLink">Shop</a></li>
@@ -40,10 +39,10 @@
                         <span></span>
                         <span></span>
                     </div>
-                    <ul class="desktopMenu">
+                    <ul class="desktopMenu scrollNav">
                         <li><a href="#" class="headerNavLink">Home</a></li>
                         <li><a href="#" class="headerNavLink">Projects</a></li>
-                        <li><a href="#" class="headerNavLink">Services</a></li>
+                        <li><a href="#sectionServices" class="headerNavLink servicesLink">Services</a></li>
                         <li><a href="#" class="headerNavLink">About</a></li>
                         <li><a href="#" class="headerNavLink">Blog</a></li>
                         <li><a href="#" class="headerNavLink">Shop</a></li>
@@ -59,7 +58,10 @@
                         consectetur adipiscing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                         veniam, quis nostrud exercitation.</p>
-                    <button class="headerTextButton" data-aos="fade-up" data-aos-delay="350">Contact</button>
+                    <div class="headerTextButtonBlock" data-aos="fade-up" data-aos-delay="350">
+                        <button class="headerTextButton">Contact</button>
+
+                    </div>
                 </div>
                 <div class="headerImg" data-aos="fade-up" data-aos-delay="150">
                     <img src="./img/headerImg.png" alt="headerImg" data-aos="fade-up" data-aos-delay="300">
@@ -74,39 +76,44 @@
                 <div class="servicesTitle">
                     <h2>Our Service</h2>
                 </div>
-                <div class="servicesBlock designServ" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50">
-                    <div class="serviceSvg">
-                        <svg class="design">
-                            <use xlink:href="img/svg/sprite.svg#design"></use>
-                        </svg>
+                <div class="designServ" data-aos="fade-up" data-aos-delay="50">
+                    <div class="servicesBlock ">
+                        <div class="serviceSvg">
+                            <svg class="design">
+                                <use xlink:href="img/svg/sprite.svg#design"></use>
+                            </svg>
+                        </div>
+                        <h4 class="serviceSubtitle">Interior Design</h4>
+                        <p class="serviceText">Lorem ipsum dolor amet consectetur
+                            adipiscing elit sed eiusmod tempor
+                            incididunt ut labore.</p>
                     </div>
-                    <h4 class="serviceSubtitle">Interior Design</h4>
-                    <p class="serviceText">Lorem ipsum dolor amet consectetur
-                        adipiscing elit sed eiusmod tempor
-                        incididunt ut labore.</p>
                 </div>
-                <div class="servicesBlock ArchitectServ" data-aos="fade-up" data-aos-offset="200" data-aos-delay="150"
-                    data-aos-anchor-placement="top-bottom">
-                    <div class="serviceSvg">
-                        <svg class="architecture">
-                            <use xlink:href="img/svg/sprite.svg#architecture"></use>
-                        </svg>
+                <div class="ArchitectServ" data-aos="fade-up" data-aos-delay="150">
+                    <div class="servicesBlock ">
+                        <div class="serviceSvg">
+                            <svg class="architecture">
+                                <use xlink:href="img/svg/sprite.svg#architecture"></use>
+                            </svg>
+                        </div>
+                        <h4 class="serviceSubtitle">Architecture</h4>
+                        <p class="serviceText">Lorem ipsum dolor amet consectetur
+                            adipiscing elit sed eiusmod tempor
+                            incididunt ut labore.</p>
                     </div>
-                    <h4 class="serviceSubtitle">Architecture</h4>
-                    <p class="serviceText">Lorem ipsum dolor amet consectetur
-                        adipiscing elit sed eiusmod tempor
-                        incididunt ut labore.</p>
                 </div>
-                <div class="servicesBlock planServ" data-aos="fade-up" data-aos-offset="200" data-aos-delay="250">
-                    <div class="serviceSvg">
-                        <svg class="planning">
-                            <use xlink:href="img/svg/sprite.svg#planning"></use>
-                        </svg>
+                <div class="planServ" data-aos="fade-up" data-aos-delay="250">
+                    <div class="servicesBlock ">
+                        <div class="serviceSvg">
+                            <svg class="planning">
+                                <use xlink:href="img/svg/sprite.svg#planning"></use>
+                            </svg>
+                        </div>
+                        <h4 class="serviceSubtitle">Planning</h4>
+                        <p class="serviceText">Lorem ipsum dolor amet consectetur
+                            adipiscing elit sed eiusmod tempor
+                            incididunt ut labore.</p>
                     </div>
-                    <h4 class="serviceSubtitle">Planning</h4>
-                    <p class="serviceText">Lorem ipsum dolor amet consectetur
-                        adipiscing elit sed eiusmod tempor
-                        incididunt ut labore.</p>
                 </div>
             </section>
             <section class="sectionAboutUs maxSize">
@@ -309,7 +316,7 @@
                         our newsletter.</p>
                 </div>
                 <form id="formEmail" class="signUpBlockInput" action="./php/mail.php" method="POST">
-                    <input id="signUpInput" name="userEmail" type="email" placeholder="Enter your email address...">
+                    <input id="signUpInput" name="user_email" type="text" placeholder="Enter your email address...">
                     <button id="buttonSubmit" type="submit">Subscribe</button>
                 </form>
             </section>
@@ -380,7 +387,8 @@
         </footer>
     </div>
 
-    <!-- <script src="./scripts/AOS/aos.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/jump.js/dist/jump.min.js"></script>
+    <script src="./scripts/AOS/aos.js"></script>
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script> -->
     <script src="./scripts/main.js"></script>

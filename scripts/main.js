@@ -1,5 +1,21 @@
+AOS.init({
+	// Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+	offset: 100, // offset (in px) from the original trigger point
+	duration: 400, // values from 0 to 3000, with step 50ms
+	easing: 'ease', // default easing for AOS animations
+	once: false, // whether animation should happen only once - while scrolling down
+	mirror: false, // whether elements should animate out while scrolling past them
+	anchorPlacement: 'top-center', // defines which position of the element regarding to window should trigger the animation
+})
+
 const burger = document.getElementById('burgerBtn');
 const headerNavMobile = document.querySelector('.headerNavMobile');
+
+function closeMobileNav() {
+	headerNavMobile.style.top = '-100%';
+	headerNavMobile.style.opacity = '0';
+	document.body.style.overflow = 'unset';
+}
 
 burger.addEventListener('click', () => {
 	burger.classList.toggle('open');
@@ -9,9 +25,7 @@ burger.addEventListener('click', () => {
 		headerNavMobile.style.opacity = '1';
 		document.body.style.overflow = 'hidden';
 	} else {
-		headerNavMobile.style.top = '-100%';
-		headerNavMobile.style.opacity = '0';
-		document.body.style.overflow = 'unset';
+		closeMobileNav()
 	}
 })
 
@@ -36,8 +50,6 @@ rightArrow.addEventListener('click', () => {
 				}, 10)
 			}
 		}, 300)
-
-
 	}
 })
 
@@ -57,8 +69,22 @@ leftArrow.addEventListener('click', () => {
 				}, 10)
 			}
 		}, 300)
-
-
-
 	}
 })
+
+const headerNavLink = document.querySelectorAll(".headerNavLink");
+
+for (const link of headerNavLink) {
+	link.addEventListener("click", () => {
+		burger.classList.remove('open');
+		closeMobileNav();
+	});
+}
+
+let navsArr = ['home', 'projects', 'services', 'about', 'blog', 'shop', 'home', 'contact'];
+
+const services = document.querySelector('.servicesLink');
+
+for (const navLink of navsArr) {
+	console.log(navLink);
+}
