@@ -1,11 +1,23 @@
-AOS.init({
-	// Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-	offset: 100, // offset (in px) from the original trigger point
-	duration: 400, // values from 0 to 3000, with step 50ms
-	easing: 'ease', // default easing for AOS animations
-	once: false, // whether animation should happen only once - while scrolling down
-	mirror: false, // whether elements should animate out while scrolling past them
-	anchorPlacement: 'top-center', // defines which position of the element regarding to window should trigger the animation
+
+
+document.addEventListener("DOMContentLoaded", () => {
+	let getId = id => document.getElementById(id);
+
+
+
+
+	window.addEventListener('scroll', () => {
+		let scroll = this.scrollY;
+		Math.round(scroll)
+
+		if (scroll < 400) {
+			getId('home').style.opacity = '0';
+		}
+		else {
+			getId('home').style.opacity = '1';
+		}
+	})
+
 })
 
 const burger = document.getElementById('burgerBtn');
@@ -81,10 +93,48 @@ for (const link of headerNavLink) {
 	});
 }
 
-let navsArr = ['home', 'projects', 'services', 'about', 'blog', 'shop', 'home', 'contact'];
+let desktopNav = document.querySelector('.desktopMenu');
 
-const services = document.querySelector('.servicesLink');
+let services = document.getElementById('services');
 
-for (const navLink of navsArr) {
-	console.log(navLink);
+// services.addEventListener('click', () => {
+// 	Jump('.sectionServices')
+// })
+
+
+function getNavId(id) {
+	let setId = id
+	console.log(setId);
+
+	// for (let i = 0; i < desktopNav.childNodes.length; i++) {
+	// 	desktopNav.childNodes[i].addEventListener('click', () => {
+	if (setId === 'home') {
+		Jump('.header')
+	}
+	if (setId === 'services') {
+		Jump('.sectionServices')
+	}
+	if (setId === 'about') {
+		Jump('.sectionAboutUs')
+	}
+	if (setId === 'blog') {
+		Jump('.sectionBlog')
+	}
+	if (setId === 'contact') {
+		Jump('.footer')
+	}
+	if (setId === 'signUp') {
+		Jump('.sectionSignUp')
+	}
+	if (setId === 'projects') {
+		Jump('.sectionCompletedWork')
+	}
+	// 	})
+
+	// }
+
+
 }
+
+
+

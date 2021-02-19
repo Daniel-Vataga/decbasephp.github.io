@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decbase</title>
 
-    <link rel="stylesheet" href="./scripts/AOS/aos.css">
     <link rel="stylesheet" href="styles/fonts.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/media.css">
@@ -17,16 +16,21 @@
     <div class="wrapper">
         <nav class="headerNavMobile scrollNav">
             <ul>
-                <li><a href="#" class="headerNavLink">Home</a></li>
-                <li><a href="#" class="headerNavLink">Projects</a></li>
-                <li><a href="#sectionServices" class="headerNavLink">Services</a></li>
-                <li><a href="#" class="headerNavLink">About</a></li>
-                <li><a href="#" class="headerNavLink">Blog</a></li>
-                <li><a href="#" class="headerNavLink">Shop</a></li>
-                <li><a href="#" class="headerNavLink">Contact</a></li>
-                <li><a href="#" class="headerSignLink">Sign&nbsp;up</a></li>
+                <li><a href="#header" class="headerNavLink" onclick="getNavId(this.id)">Home</a></li>
+                <li><a href="#sectionCompletedWork" id="projects" class="headerNavLink" onclick="getNavId(this.id)">Projects</a></li>
+                <li><a href="#sectionServices" id="services" class="headerNavLink" onclick="getNavId(this.id)">Services</a></li>
+                <li><a href="#sectionAboutUs" id="about" class="headerNavLink" onclick="getNavId(this.id)">About</a></li>
+                <li><a href="#sectionBlog" id="blog" class="headerNavLink" onclick="getNavId(this.id)">Blog</a></li>
+                <li><a href="#sectionBlog" id="shop" class="headerNavLink" onclick="getNavId(this.id)">Shop</a></li>
+                <li><a href="#footer" id="contact" class="headerNavLink" onclick="getNavId(this.id)">Contact</a></li>
+                <li><a href="#sectionSignUp" id="signUp" class="headerSignLink" onclick="getNavId(this.id)">Sign&nbsp;up</a></li>
             </ul>
         </nav>
+        <div class="toHeader" id="home" onclick="getNavId(this.id)">
+            <svg class="arrowUp">
+                <use xlink:href="img/svg/sprite.svg#arrowUp"></use>
+            </svg>
+        </div>
         <div class="maxSize">
             <header class="header">
                 <div class="headerLogo">
@@ -40,31 +44,31 @@
                         <span></span>
                     </div>
                     <ul class="desktopMenu scrollNav">
-                        <li><a href="#" class="headerNavLink">Home</a></li>
-                        <li><a href="#" class="headerNavLink">Projects</a></li>
-                        <li><a href="#sectionServices" class="headerNavLink servicesLink">Services</a></li>
-                        <li><a href="#" class="headerNavLink">About</a></li>
-                        <li><a href="#" class="headerNavLink">Blog</a></li>
-                        <li><a href="#" class="headerNavLink">Shop</a></li>
-                        <li><a href="#" class="headerNavLink">Contact</a></li>
-                        <li><a href="#" class="headerSignLink">Sign&nbsp;up</a></li>
+                        <li><a href="#header" id="home" class="headerNavLink" onclick="getNavId(this.id)">Home</a></li>
+                        <li><a href="#sectionCompletedWork" id="projects" class="headerNavLink" onclick="getNavId(this.id)">Projects</a></li>
+                        <li><a href="#sectionServices" id="services" class="headerNavLink" onclick="getNavId(this.id)">Services</a></li>
+                        <li><a href="#sectionAboutUs" id="about" class="headerNavLink" onclick="getNavId(this.id)">About</a></li>
+                        <li><a href="#sectionBlog" id="blog" class="headerNavLink" onclick="getNavId(this.id)">Blog</a></li>
+                        <li><a href="#sectionBlog" id="shop" class="headerNavLink" onclick="getNavId(this.id)">Shop</a></li>
+                        <li><a href="#footer" id="contact" class="headerNavLink" onclick="getNavId(this.id)">Contact</a></li>
+                        <li><a href="#sectionSignUp" id="signUp" class="headerSignLink" onclick="getNavId(this.id)">Sign&nbsp;up</a></li>
                     </ul>
                 </nav>
 
                 <div class="headerText">
-                    <span data-aos="fade-up" data-aos-delay="150">MODERN INTERIOR</span>
-                    <h1 data-aos="fade-up" data-aos-delay="150">Create Your Interior Design.</h1>
-                    <p data-aos="fade-up" data-aos-delay="250">Lorem ipsum dolor sit amet,
+                    <span>MODERN INTERIOR</span>
+                    <h1>Create Your Interior Design.</h1>
+                    <p>Lorem ipsum dolor sit amet,
                         consectetur adipiscing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                         veniam, quis nostrud exercitation.</p>
-                    <div class="headerTextButtonBlock" data-aos="fade-up" data-aos-delay="350">
+                    <div class="headerTextButtonBlock">
                         <button class="headerTextButton">Contact</button>
 
                     </div>
                 </div>
-                <div class="headerImg" data-aos="fade-up" data-aos-delay="150">
-                    <img src="./img/headerImg.png" alt="headerImg" data-aos="fade-up" data-aos-delay="300">
+                <div class="headerImg">
+                    <img src="./img/headerImg.png" alt="headerImg">
                 </div>
             </header>
         </div>
@@ -76,7 +80,7 @@
                 <div class="servicesTitle">
                     <h2>Our Service</h2>
                 </div>
-                <div class="designServ" data-aos="fade-up" data-aos-delay="50">
+                <div class="designServ">
                     <div class="servicesBlock ">
                         <div class="serviceSvg">
                             <svg class="design">
@@ -89,7 +93,7 @@
                             incididunt ut labore.</p>
                     </div>
                 </div>
-                <div class="ArchitectServ" data-aos="fade-up" data-aos-delay="150">
+                <div class="ArchitectServ">
                     <div class="servicesBlock ">
                         <div class="serviceSvg">
                             <svg class="architecture">
@@ -102,7 +106,7 @@
                             incididunt ut labore.</p>
                     </div>
                 </div>
-                <div class="planServ" data-aos="fade-up" data-aos-delay="250">
+                <div class="planServ">
                     <div class="servicesBlock ">
                         <div class="serviceSvg">
                             <svg class="planning">
@@ -118,15 +122,14 @@
             </section>
             <section class="sectionAboutUs maxSize">
                 <div class="aboutUsWrapper">
-                    <div class="aboutUsImg" data-aos="fade-up" data-aos-delay="150" data-aos-offset="150">
-                        <img src="./img/aboutUs.png" alt="aboutUsImg" data-aos="fade-up" data-aos-delay="300"
-                            data-aos-offset="150">
+                    <div class="aboutUsImg">
+                        <img src="./img/aboutUs.png" alt="aboutUsImg">
                     </div>
                     <div class="aboutUsText">
-                        <span data-aos="fade-up" data-aos-delay="150" data-aos-offset="150">ABOUT US</span>
-                        <h2 data-aos="fade-up" data-aos-delay="150" data-aos-offset="150">Interioris The Will of An
+                        <span>ABOUT US</span>
+                        <h2>Interioris The Will of An
                             Epoch Mextreo</h2>
-                        <p data-aos="fade-up" data-aos-delay="250" data-aos-offset="150">There are many variations of
+                        <p>There are many variations of
                             passages of Lorem Ipsum available,
                             but the majority have suffered alteration in some form injected
                             humour, or randomised words which don't look even slightly
@@ -135,26 +138,25 @@
                             All the Lorem Ipsum generators on the Internettend to repeat
                             predefined chunks as necessary,making this the first true
                             generator on the Internet.</p>
-                        <button class="aboutUsTextButton" data-aos="fade-up" data-aos-delay="350">Learn more</button>
+                        <button class="aboutUsTextButton">Learn more</button>
                         <!-- <button class="aboutUsShowImg">Show Image <i class="far fa-image"></i></button> -->
                     </div>
                 </div>
             </section>
             <section class="sectionSuccess maxSize">
                 <div class="successText">
-                    <div class="textImageSuccess" data-aos="fade-up" data-aos-delay="150" data-aos-offset="150">
+                    <div class="textImageSuccess">
                         <p>
                             20
                         </p>
                     </div>
-                    <h2 data-aos="fade-up" data-aos-delay="250" data-aos-offset="150">Years Of Successful Working The
+                    <h2>Years Of Successful Working The
                         Market</h2>
-                    <button class="successTextButton" data-aos="fade-up" data-aos-delay="350" data-aos-offset="150">read
+                    <button class="successTextButton">read
                         more</button>
                 </div>
-                <div class="successImg" data-aos="fade-up" data-aos-delay="150" data-aos-offset="150">
-                    <img src="./img/successImg.png" alt="successImg" data-aos="fade-up" data-aos-delay="300"
-                        data-aos-offset="150">
+                <div class="successImg">
+                    <img src="./img/successImg.png" alt="successImg">
                 </div>
             </section>
             <section class="sectionCompletedWork">
@@ -162,25 +164,25 @@
                     <h3>3000+ Completed Work Which WE have Successfully Done</h3>
                 </div>
                 <div class="completeInfoBlock">
-                    <div class="statBlock statProject" data-aos="fade-up" data-aos-delay="50" data-aos-offset="200">
+                    <div class="statBlock statProject">
                         <div class="statInfo">
                             <strong>980</strong>
                             <span>Projects</span>
                         </div>
                     </div>
-                    <div class="statBlock statClient" data-aos="fade-up" data-aos-delay="200" data-aos-offset="200">
+                    <div class="statBlock statClient">
                         <div class="statInfo">
                             <strong>520</strong>
                             <span>Happy Client</span>
                         </div>
                     </div>
-                    <div class="statBlock statwinners" data-aos="fade-up" data-aos-delay="350" data-aos-offset="200">
+                    <div class="statBlock statwinners">
                         <div class="statInfo">
                             <strong>330</strong>
                             <span>Winners</span>
                         </div>
                     </div>
-                    <div class="statBlock statRecommend" data-aos="fade-up" data-aos-delay="500" data-aos-offset="200">
+                    <div class="statBlock statRecommend">
                         <div class="statInfo">
                             <strong>120</strong>
                             <span>Recommends</span>
@@ -388,7 +390,6 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/jump.js/dist/jump.min.js"></script>
-    <script src="./scripts/AOS/aos.js"></script>
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script> -->
     <script src="./scripts/main.js"></script>
