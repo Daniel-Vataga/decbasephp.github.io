@@ -72,6 +72,29 @@ body {
   margin: 0 auto;
 }
 
+.toHeader {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  border: 3px solid #CAA892;
+  -webkit-transition: all .7s ease;
+  transition: all .7s ease;
+  padding: 12px;
+  z-index: 998;
+  display: none;
+}
+
+.toHeader svg {
+  width: 100%;
+  height: 100%;
+  fill: #CAA892;
+}
+
 .header {
   display: -ms-grid;
   display: grid;

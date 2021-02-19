@@ -373,6 +373,10 @@
 
 @media screen and (max-width: 768px) {
 
+    .toHeader {
+        display: block;
+    }
+
     .header {
         grid-template-areas:
             'headerLogo headerNav'
