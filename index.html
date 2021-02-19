@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decbase</title>
-
+    <link rel="stylesheet" href="scripts/wow/animate.css" />
     <link rel="stylesheet" href="styles/fonts.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/media.css">
@@ -17,13 +17,17 @@
         <nav class="headerNavMobile scrollNav">
             <ul>
                 <li><a href="#header" class="headerNavLink" onclick="getNavId(this.id)">Home</a></li>
-                <li><a href="#sectionCompletedWork" id="projects" class="headerNavLink" onclick="getNavId(this.id)">Projects</a></li>
-                <li><a href="#sectionServices" id="services" class="headerNavLink" onclick="getNavId(this.id)">Services</a></li>
-                <li><a href="#sectionAboutUs" id="about" class="headerNavLink" onclick="getNavId(this.id)">About</a></li>
+                <li><a href="#sectionCompletedWork" id="projects" class="headerNavLink"
+                        onclick="getNavId(this.id)">Projects</a></li>
+                <li><a href="#sectionServices" id="services" class="headerNavLink"
+                        onclick="getNavId(this.id)">Services</a></li>
+                <li><a href="#sectionAboutUs" id="about" class="headerNavLink" onclick="getNavId(this.id)">About</a>
+                </li>
                 <li><a href="#sectionBlog" id="blog" class="headerNavLink" onclick="getNavId(this.id)">Blog</a></li>
                 <li><a href="#sectionBlog" id="shop" class="headerNavLink" onclick="getNavId(this.id)">Shop</a></li>
                 <li><a href="#footer" id="contact" class="headerNavLink" onclick="getNavId(this.id)">Contact</a></li>
-                <li><a href="#sectionSignUp" id="signUp" class="headerSignLink" onclick="getNavId(this.id)">Sign&nbsp;up</a></li>
+                <li><a href="#sectionSignUp" id="signUp" class="headerSignLink"
+                        onclick="getNavId(this.id)">Sign&nbsp;up</a></li>
             </ul>
         </nav>
         <div class="toHeader" id="home" onclick="getNavId(this.id)">
@@ -31,47 +35,52 @@
                 <use xlink:href="img/svg/sprite.svg#arrowUp"></use>
             </svg>
         </div>
-        <div class="maxSize">
-            <header class="header">
-                <div class="headerLogo">
-                    <img src="./img/logo.png" alt="logo">
+        <header class="header maxSize">
+            <div class="headerLogo">
+                <img src="./img/logo.png" alt="logo">
+            </div>
+            <nav class="headerNav">
+                <div id="burgerBtn" class="burgerBlock">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
-                <nav class="headerNav">
-                    <div id="burgerBtn" class="burgerBlock">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <ul class="desktopMenu scrollNav">
-                        <li><a href="#header" id="home" class="headerNavLink" onclick="getNavId(this.id)">Home</a></li>
-                        <li><a href="#sectionCompletedWork" id="projects" class="headerNavLink" onclick="getNavId(this.id)">Projects</a></li>
-                        <li><a href="#sectionServices" id="services" class="headerNavLink" onclick="getNavId(this.id)">Services</a></li>
-                        <li><a href="#sectionAboutUs" id="about" class="headerNavLink" onclick="getNavId(this.id)">About</a></li>
-                        <li><a href="#sectionBlog" id="blog" class="headerNavLink" onclick="getNavId(this.id)">Blog</a></li>
-                        <li><a href="#sectionBlog" id="shop" class="headerNavLink" onclick="getNavId(this.id)">Shop</a></li>
-                        <li><a href="#footer" id="contact" class="headerNavLink" onclick="getNavId(this.id)">Contact</a></li>
-                        <li><a href="#sectionSignUp" id="signUp" class="headerSignLink" onclick="getNavId(this.id)">Sign&nbsp;up</a></li>
-                    </ul>
-                </nav>
+                <ul class="desktopMenu scrollNav">
+                    <li><a href="#header" id="home" class="headerNavLink" onclick="getNavId(this.id)">Home</a></li>
+                    <li><a href="#sectionCompletedWork" id="projects" class="headerNavLink"
+                            onclick="getNavId(this.id)">Projects</a></li>
+                    <li><a href="#sectionServices" id="services" class="headerNavLink"
+                            onclick="getNavId(this.id)">Services</a></li>
+                    <li><a href="#sectionAboutUs" id="about" class="headerNavLink" onclick="getNavId(this.id)">About</a>
+                    </li>
+                    <li><a href="#sectionBlog" id="blog" class="headerNavLink" onclick="getNavId(this.id)">Blog</a>
+                    </li>
+                    <li><a href="#sectionBlog" id="shop" class="headerNavLink" onclick="getNavId(this.id)">Shop</a>
+                    </li>
+                    <li><a href="#footer" id="contact" class="headerNavLink" onclick="getNavId(this.id)">Contact</a>
+                    </li>
+                    <li><a href="#sectionSignUp" id="signUp" class="headerSignLink"
+                            onclick="getNavId(this.id)">Sign&nbsp;up</a></li>
+                </ul>
+            </nav>
 
-                <div class="headerText">
-                    <span>MODERN INTERIOR</span>
-                    <h1>Create Your Interior Design.</h1>
-                    <p>Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                        veniam, quis nostrud exercitation.</p>
-                    <div class="headerTextButtonBlock">
-                        <button class="headerTextButton">Contact</button>
+            <div class="headerText">
+                <span class="wow fadeInUp" data-wow-delay="50ms">MODERN INTERIOR</span>
+                <h1 class="wow fadeInUp" data-wow-delay="150ms">Create Your Interior Design.</h1>
+                <p class="wow fadeInUp" data-wow-delay="250ms">Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                    veniam, quis nostrud exercitation.</p>
+                <div class="headerTextButtonBlock wow fadeInUp" data-wow-delay="350ms">
+                    <button class="headerTextButton">Contact</button>
 
-                    </div>
                 </div>
-                <div class="headerImg">
-                    <img src="./img/headerImg.png" alt="headerImg">
-                </div>
-            </header>
-        </div>
+            </div>
+            <div class="headerImg wow fadeInUp" data-wow-delay="150ms">
+                <img src="./img/headerImg.png" alt="headerImg" class="wow fadeInUp" data-wow-delay="250ms">
+            </div>
+        </header>
         <main class="main">
             <section class="sectionServices maxSize">
                 <div class="servicesSpan">
@@ -80,7 +89,7 @@
                 <div class="servicesTitle">
                     <h2>Our Service</h2>
                 </div>
-                <div class="designServ">
+                <div class="designServ wow fadeInUp" data-wow-delay="150ms" data-wow-offset="170">
                     <div class="servicesBlock ">
                         <div class="serviceSvg">
                             <svg class="design">
@@ -93,7 +102,7 @@
                             incididunt ut labore.</p>
                     </div>
                 </div>
-                <div class="ArchitectServ">
+                <div class="ArchitectServ wow fadeInUp" data-wow-delay="300ms" data-wow-offset="170">
                     <div class="servicesBlock ">
                         <div class="serviceSvg">
                             <svg class="architecture">
@@ -106,7 +115,7 @@
                             incididunt ut labore.</p>
                     </div>
                 </div>
-                <div class="planServ">
+                <div class="planServ wow fadeInUp" data-wow-delay="450ms" data-wow-offset="170">
                     <div class="servicesBlock ">
                         <div class="serviceSvg">
                             <svg class="planning">
@@ -122,14 +131,15 @@
             </section>
             <section class="sectionAboutUs maxSize">
                 <div class="aboutUsWrapper">
-                    <div class="aboutUsImg">
-                        <img src="./img/aboutUs.png" alt="aboutUsImg">
+                    <div class="aboutUsImg wow fadiInUp" data-wow-delay="150ms" data-wow-offset="170">
+                        <img src="./img/aboutUs.png" alt="aboutUsImg" class="wow fadiInUp" data-wow-delay="250ms"
+                            data-wow-offset="170">
                     </div>
                     <div class="aboutUsText">
-                        <span>ABOUT US</span>
-                        <h2>Interioris The Will of An
+                        <span class=" wow fadeInUp" data-wow-delay="50ms">ABOUT US</span>
+                        <h2 class=" wow fadeInUp" data-wow-delay="150ms">Interioris The Will of An
                             Epoch Mextreo</h2>
-                        <p>There are many variations of
+                        <p class=" wow fadeInUp" data-wow-delay="300ms">There are many variations of
                             passages of Lorem Ipsum available,
                             but the majority have suffered alteration in some form injected
                             humour, or randomised words which don't look even slightly
@@ -138,25 +148,25 @@
                             All the Lorem Ipsum generators on the Internettend to repeat
                             predefined chunks as necessary,making this the first true
                             generator on the Internet.</p>
-                        <button class="aboutUsTextButton">Learn more</button>
+                        <button class="aboutUsTextButton wow fadeInUp" data-wow-delay="450ms">Learn more</button>
                         <!-- <button class="aboutUsShowImg">Show Image <i class="far fa-image"></i></button> -->
                     </div>
                 </div>
             </section>
             <section class="sectionSuccess maxSize">
                 <div class="successText">
-                    <div class="textImageSuccess">
+                    <div class="textImageSuccess wow fadeInUp" data-wow-delay="50ms" data-wow-offset="170">
                         <p>
                             20
                         </p>
                     </div>
-                    <h2>Years Of Successful Working The
+                    <h2 class="wow fadeInUp" data-wow-delay="150ms" data-wow-offset="170">Years Of Successful Working The
                         Market</h2>
-                    <button class="successTextButton">read
+                    <button class="successTextButton wow fadeInUp" data-wow-delay="300ms" data-wow-offset="170">read
                         more</button>
                 </div>
-                <div class="successImg">
-                    <img src="./img/successImg.png" alt="successImg">
+                <div class="successImg wow fadeInUp" data-wow-delay="150ms" data-wow-offset="170">
+                    <img src="./img/successImg.png" alt="successImg" class="wow fadeInUp" data-wow-delay="250ms" data-wow-offset="170">
                 </div>
             </section>
             <section class="sectionCompletedWork">
@@ -164,25 +174,25 @@
                     <h3>3000+ Completed Work Which WE have Successfully Done</h3>
                 </div>
                 <div class="completeInfoBlock">
-                    <div class="statBlock statProject">
+                    <div class="statBlock statProject wow fadeInUp" data-wow-delay="50ms" data-wow-offset="170">
                         <div class="statInfo">
                             <strong>980</strong>
                             <span>Projects</span>
                         </div>
                     </div>
-                    <div class="statBlock statClient">
+                    <div class="statBlock statClient wow fadeInUp" data-wow-delay="150ms" data-wow-offset="170">
                         <div class="statInfo">
                             <strong>520</strong>
                             <span>Happy Client</span>
                         </div>
                     </div>
-                    <div class="statBlock statwinners">
+                    <div class="statBlock statwinners wow fadeInUp" data-wow-delay="300ms" data-wow-offset="170">
                         <div class="statInfo">
                             <strong>330</strong>
                             <span>Winners</span>
                         </div>
                     </div>
-                    <div class="statBlock statRecommend">
+                    <div class="statBlock statRecommend wow fadeInUp" data-wow-delay="450ms" data-wow-offset="170">
                         <div class="statInfo">
                             <strong>120</strong>
                             <span>Recommends</span>
@@ -217,7 +227,7 @@
 
                     </div>
                     <div class="feedbackBlock">
-                        <div class="card firstSlide">
+                        <div class="card firstSlide wow fadeInUp" data-wow-delay="150ms" data-wow-offset="170">
                             <div class="cardImg">
                                 <img src="./img/users/user1.png" alt="user">
                             </div>
@@ -232,7 +242,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card firstSlide">
+                        <div class="card firstSlide wow fadeInUp" data-wow-delay="300ms" data-wow-offset="170">
                             <div class="cardImg">
                                 <img src="./img/users/user2.png" alt="user">
                             </div>
@@ -286,7 +296,7 @@
                     <h3>From Our Blog</h3>
                 </div>
                 <div class="blogCardContainer">
-                    <div class="blogCard">
+                    <div class="blogCard wow fadeInUp" data-wow-delay="150ms" data-wow-offset="170">
                         <div class="blogCardImg">
                             <img src="./img/blogCard1.png" alt="blogCardImg">
                         </div>
@@ -297,7 +307,7 @@
                         <button class="blogButton">continue reading....</button>
                         <!-- </div> -->
                     </div>
-                    <div class="blogCard blogCardTwo">
+                    <div class="blogCard blogCardTwo wow fadeInUp" data-wow-delay="300ms" data-wow-offset="170">
                         <div class="blogCardImg blogCardImgTwo">
                             <img src="./img/blogCard2.png" alt="blogCardImg">
                         </div>
@@ -312,12 +322,12 @@
             </section>
             <section class="sectionSignUp maxSize">
                 <div class="signUpBlockText">
-                    <h3>don’t forget to sign up</h3>
-                    <div class="greyLine"></div>
-                    <p>Find out early about all upcoming promotions and new product releases with
+                    <h3 class="wow fadeInUp" data-wow-delay="50ms" data-wow-offset="170">don’t forget to sign up</h3>
+                    <div class="greyLine wow fadeInUp" data-wow-delay="150ms" data-wow-offset="170"></div>
+                    <p class="wow fadeInUp" data-wow-delay="300ms" data-wow-offset="170">Find out early about all upcoming promotions and new product releases with
                         our newsletter.</p>
                 </div>
-                <form id="formEmail" class="signUpBlockInput" action="./php/mail.php" method="POST">
+                <form id="formEmail" class="signUpBlockInput wow fadeInUp" data-wow-delay="450ms" data-wow-offset="170">
                     <input id="signUpInput" name="user_email" type="text" placeholder="Enter your email address...">
                     <button id="buttonSubmit" type="submit">Subscribe</button>
                 </form>
@@ -325,12 +335,12 @@
         </main>
         <footer class="footer">
             <div class="footerWrapper">
-                <div class="footerLogo">
+                <div class="footerLogo wow fadeInUp" data-wow-delay="50ms">
                     <img src="./img/logo.png" alt="logo">
                     <p>But i must explain to you all this mistaken
                         idea of dencouncing pleasure.</p>
                 </div>
-                <div class="footerQuickLinks">
+                <div class="footerQuickLinks wow fadeInUp" data-wow-delay="150ms">
                     <strong class="footerStrongTitle">Quick Links</strong>
                     <ul>
                         <li><a>About Our Company</a></li>
@@ -340,7 +350,7 @@
                         <li><a>Contact US</a></li>
                     </ul>
                 </div>
-                <div class="footerCompany">
+                <div class="footerCompany wow fadeInUp" data-wow-delay="250ms">
                     <strong class="footerStrongTitle">Company</strong>
                     <ul>
                         <li><a>About Company</a></li>
@@ -350,14 +360,14 @@
                         <li><a>Get a free Quot</a></li>
                     </ul>
                 </div>
-                <div class="footerContact">
+                <div class="footerContact wow fadeInUp" data-wow-delay="350ms">
                     <strong class="footerStrongTitle">Contact Us</strong>
                     <p>Sagrada Familia, Herba<br />
                         Street Front USA<br />
                         brandoxide@gmail.com<br />
                         002-568423591</p>
                 </div>
-                <div class="footerFollow">
+                <div class="footerFollow wow fadeInUp" data-wow-delay="450ms">
                     <strong class="footerStrongTitle">Follow us</strong>
                     <div class="socials">
                         <div class="footerSvgBlock">
@@ -382,7 +392,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="copyright">
+                <div class="copyright wow fadeInUp">
                     <p>Copyright @ 2020 Brandoxide.all right reserved.</p>
                 </div>
             </div>
@@ -390,6 +400,8 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/jump.js/dist/jump.min.js"></script>
+    <script src="scripts/wow/wow.min.js"></script>
+
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script> -->
     <script src="./scripts/main.js"></script>

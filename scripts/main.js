@@ -1,12 +1,9 @@
-
+new WOW().init();
 
 document.addEventListener("DOMContentLoaded", () => {
 	let getId = id => document.getElementById(id);
 
-
-
-
-	window.addEventListener('scroll', () => {
+	function scrollTop() {
 		let scroll = this.scrollY;
 		Math.round(scroll)
 
@@ -16,6 +13,10 @@ document.addEventListener("DOMContentLoaded", () => {
 		else {
 			getId('home').style.opacity = '1';
 		}
+	}
+
+	window.addEventListener('scroll', () => {
+		scrollTop()
 	})
 
 })
@@ -95,17 +96,8 @@ for (const link of headerNavLink) {
 
 let desktopNav = document.querySelector('.desktopMenu');
 
-let services = document.getElementById('services');
-
-// services.addEventListener('click', () => {
-// 	Jump('.sectionServices')
-// })
-
-
 function getNavId(id) {
 	let setId = id
-	console.log(setId);
-
 	// for (let i = 0; i < desktopNav.childNodes.length; i++) {
 	// 	desktopNav.childNodes[i].addEventListener('click', () => {
 	if (setId === 'home') {
