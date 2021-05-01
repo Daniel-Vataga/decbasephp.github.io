@@ -850,7 +850,7 @@ body {
 .main .sectionTestimonials .testimonialsArrows button {
   background-color: #fff;
   border: none;
-  padding: 0;
+  padding: 10px 0;
 }
 
 .main .sectionTestimonials .testimonialsArrows button:disabled .testArrow, .main .sectionTestimonials .testimonialsArrows button[disabled] .testArrow {
@@ -1354,7 +1354,14 @@ body {
       flex-wrap: wrap;
 }
 
-.footer .footerWrapper .footerFollow .socials .footerSvgBlock {
+.footer .footerWrapper .footerFollow .socials .footerFollowLine {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 5px;
+}
+
+.footer .footerWrapper .footerFollow .socials .footerFollowLine .footerSvgBlock {
   width: 35px;
   height: 35px;
   padding: 5px;
@@ -1373,7 +1380,7 @@ body {
   margin: 5px;
 }
 
-.footer .footerWrapper .footerFollow .socials .footerSvgBlock svg {
+.footer .footerWrapper .footerFollow .socials .footerFollowLine .footerSvgBlock svg {
   color: #fff;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
@@ -1382,12 +1389,12 @@ body {
   fill: #fff;
 }
 
-.footer .footerWrapper .footerFollow .socials .footerSvgBlock:hover {
+.footer .footerWrapper .footerFollow .socials .footerFollowLine .footerSvgBlock:hover {
   background-color: #37806B;
   cursor: pointer;
 }
 
-.footer .footerWrapper .footerFollow .socials .footerSvgBlock:first-child {
+.footer .footerWrapper .footerFollow .socials .footerFollowLine .footerSvgBlock:first-child {
   margin: 5px 5px 5px 0;
 }
 
