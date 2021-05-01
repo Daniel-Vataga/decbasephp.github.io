@@ -602,8 +602,16 @@
         grid-template-areas: 'logo logo' 'quick company' 'contact follow' 'copyright copyright';
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
-    -ms-grid-rows: 100px 1fr 1fr 60px;
-        grid-template-rows: 100px 1fr 1fr 60px;
+    -ms-grid-rows: 100px 1fr 1fr 90px;
+        grid-template-rows: 100px 1fr 1fr 90px;
+  }
+  .footer .footerWrapper .copyright {
+    text-align: center;
+  }
+  .footer .footerWrapper .copyright p {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
 }
 
